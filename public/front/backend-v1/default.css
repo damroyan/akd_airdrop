@@ -1,0 +1,27 @@
+@import "./bootstrap.lumen.css";
+
+.navbar {
+    margin-bottom: 11px;
+}
+
+body {
+    margin-top: 45px;
+}
+
+.btn-group {
+    font-size: 0;
+    white-space: nowrap;
+}
+
+    .btn-group > .btn {
+        float: none;
+    }
+
+.ajax-loader {
+    background: url(../img/ajax-loader.gif) 0 0 no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    width: 66px;
+    height: 66px;
+}
+

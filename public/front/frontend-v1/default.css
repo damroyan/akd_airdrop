@@ -1,0 +1,32 @@
+ul.nav > li > a > sup {
+    font-weight: normal !important;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+/** обработка загрузки картинок по клику на предыдущую картинку
+    Смотреть пример реализации в профиле
+ */
+.fileinput-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.fileinput-button > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 1000px;
+    direction: ltr;
+    cursor: pointer;
+}
+

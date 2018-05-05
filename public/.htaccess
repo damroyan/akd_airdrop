@@ -1,0 +1,34 @@
+DirectoryIndex index.php
+
+Options All -Indexes
+
+AddDefaultCharset UTF-8
+
+RewriteBase /
+RewriteEngine On
+
+# .host.name -> www.host.name
+RewriteCond %{HTTP_HOST} skeleton\.local$
+RewriteCond %{HTTP_HOST} !^www\.skeleton\.local$
+RewriteRule ^(.*)$ http://www.skeleton.local/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} skeleton\.com$
+RewriteCond %{HTTP_HOST} !^www\.skeleton\.com$
+RewriteRule ^(.*)$ http://www.skeleton.com/$1 [R=301,L]
+
+# back slash
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI}  !\.([a-z0-9]{1,5})$
+RewriteRule ^(.*)([^/])$ /$1$2/ [L,R=301]
+
+# обрезание index\.(php|html?|phtml)
+
+RewriteCond %{REQUEST_URI}  index\.(php|html?|phtml)$
+RewriteRule ^(.*)index\.(php|html?|phtml)$ /$1 [L,R=301]
+
+# phalcon index
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /?_url=/$1 [QSA,L]

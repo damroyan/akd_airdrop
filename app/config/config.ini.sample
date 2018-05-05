@@ -1,0 +1,77 @@
+[database]
+host     = "192.168.2.100"
+username = "user"
+password = "123456"
+name     = "skeleton"
+log      = false
+persistent = true
+
+
+[recaptcha]
+url = "https://www.google.com/recaptcha/api/siteverify"
+public_key = "6LdB1hQUAAAAAJ3u0h0EnJXcvmDeQhcxph22fG8x"
+secret_key = "6LdB1hQUAAAAABvE3zKeAcL4q0ORNIogu1EYQs6E"
+enabled = false
+
+[zendeck]
+subdomain = ""
+username = ""
+token = ""
+
+[system]
+version         = "0000-00-00T00:01"
+secretKey       = "asdasd"
+imageKey        = "asdasdasdasd"
+projectName     = "Skeleton"
+
+[mail]
+type = "mail"
+host = "smtp.mandrillapp.com"
+port = "587"
+user = ""
+password = ""
+
+[session]
+member_cookie="MEMBER"
+member_cookie_lifetime="2592000"
+
+name = "SID"
+path = "/"
+domain = "www.skeleton.local"
+lifetime = "0"
+http = "1"
+
+[emails]
+feedback            = "damroyan@orbis3.com"
+
+[application]
+protocol            = "http://"
+domain              = "www.skeleton.local"
+default_lang        = "en"
+accepted_languages  = "en,ru"
+directoryLog        = "/log/"
+production          = false
+viewsLayoutsDir     = layouts/
+viewsPartialsDir    = partials/
+jsTemplateDir = "/public/front/tmpl/"
+
+[cache]
+view_lifitime = "86400"
+view_directory = "/cache/view/"
+meta_lifetime = "86400"
+meta_directory = "/cache/meta/"
+meta_prefix = "phalcon_meta_rankval"
+meta_type = "memory"
+annotation_lifetime = "86400"
+annotation_directory = "/cache/annotation/"
+annotation_prefix = "phalcon_annotation_rankval"
+annotation_type = "memory"
+default_lifetime = "3600"
+default_directory = "/cache/default/"
+default_prefix = "phalcon_default_rankval"
+default_type = "file"
+
+[image]
+directory_tmp = "/i/t"
+directory_upload = "/i/u"
+directory_resize = "/s"

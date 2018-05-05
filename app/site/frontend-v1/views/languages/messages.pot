@@ -1,0 +1,32 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: ../../../../../app/di.php:150 ../../../../../app/function.php:196
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-12 17:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# спец коммент, в котором, если нужно, описать на английском
+# где и при каких обстоятельствах вызывается, чтобы
+# человек-переводчик перевел максимально адекватно
+msgid "Hello"
+msgstr ""
+
+# версия для множественного числа
+msgid "File"
+msgid_plural "Files"
+msgstr[0] "Файл"
+msgstr[1] "Файла"
+msgstr[2] "Файлов"

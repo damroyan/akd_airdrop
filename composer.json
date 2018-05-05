@@ -1,0 +1,14 @@
+{
+    "require": {
+        "onokumus/metismenu": "^2",
+        "fortawesome/font-awesome": "^4",
+        "components/jquery": "^3",
+        "twitter/bootstrap": "^3",
+        "gettext/gettext": "dev-master",
+        "guzzlehttp/guzzle": "^6",
+        "components/jqueryui": "^1.12",
+        "drmonty/animate.css": "^3.5",
+        "zendesk/zendesk_api_client_php": "^2.2",
+        "blueimp/jquery-file-upload": "^9.21"
+    }
+}
