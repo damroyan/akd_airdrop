@@ -1,7 +1,6 @@
 {% extends "layouts/layout.volt" %}
 
 {% block content %}
-<div class="content animate-panel">
     <div class="row">
         <div class="col-md-9">
             <div class="hpanel">
@@ -54,5 +53,4 @@
         </div>
         {{ partial('right_col') }}
     </div>
-</div>
 {% endblock %}

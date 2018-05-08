@@ -1,5 +1,5 @@
 <div class="col-md-3">
-    <div class="row">
+
         <div class="hpanel">
             <div class="panel-body">
                 <h5>{{ t.gettext('Featured offers') }}</h5>
@@ -12,11 +12,10 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
+
+
         <a href="">
             <img src="/front/img/banners/banner.png" width="100%" />
         </a>
-    </div>
 </div>

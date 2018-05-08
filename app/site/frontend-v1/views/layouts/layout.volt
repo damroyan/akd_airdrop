@@ -18,15 +18,15 @@
 
         {# основной контент #}
         <div id="wrapper">
+            <div class="content animate-panel">
+                {% block content %}{% endblock %}
 
-            {% block content %}{% endblock %}
+                {# выдвигающаяся панель справа #}
+              {#  {{ partial('right_sidebar') }} #}
 
-            {# выдвигающаяся панель справа #}
-          {#  {{ partial('right_sidebar') }} #}
-
-            {# прибитый футер  #}
-            {{ partial('footer') }}
-
+                {# прибитый футер  #}
+                {{ partial('footer') }}
+            </div>
         </div>
 
         {# подключени JS #}

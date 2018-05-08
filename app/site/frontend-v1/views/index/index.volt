@@ -1,8 +1,9 @@
 {% extends "layouts/layout.volt" %}
 
 {% block content %}
-    <div class="content animate-panel">
+
         <div class="row">
+
             <div class="col-md-9">
                 {% for i in [1,2,3] %}
                     {# отображение Projects #}
@@ -13,7 +14,7 @@
                             <div class="row">
                                 <div class="col-sm-3 project-info">
                                     <div class="project-action m-t-md text-center">
-                                        <a href="">
+                                        <a href="{{ url({'for':'frontend-v1-offer-one','offer_id':1}) }}">
                                             <img src="/front/img/logos/opet-foundation.jpg" class="ico-icon" />
                                         </a>
 
@@ -49,7 +50,7 @@
                                             123
                                         </div>
                                         <div class="col-sm-8">
-                                            <a class="btn btn-success">
+                                            <a href="{{ url({'for':'frontend-v1-offer-one','offer_id':1}) }}" class="btn btn-success">
                                                 {{ t.gettext('Get') }}
                                             </a>
                                         </div>
@@ -66,7 +67,6 @@
 
         </div>
 
-    </div>
 
 
 {% endblock %}

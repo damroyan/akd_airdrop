@@ -1,18 +1,18 @@
-<div class="row">
-    <div class="col-md-11">
 
 
-    <div class="hpanel">
-        <div class="panel-body text-center">
-            <h2>{{ t.gettext("Disclamer") }}</h2>
-            {{ config.system.projectName }}
-            {{ t.gettext("disclamer text") }}
-            <br><br>
-            <p class="text-danger">
-                {{ t.gettext("Please never share your private key with anyone as they will be able to steal money from you!") }}
-            </p>
+<div class="row mt10">
+    <div class="col-md-12">
+        <div class="hpanel">
+            <div class="panel-body text-center">
+                <h2>{{ t.gettext("Disclamer") }}</h2>
+                {{ config.system.projectName }}
+                {{ t.gettext("disclamer text") }}
+                <br><br>
+                <p class="text-danger">
+                    {{ t.gettext("Please never share your private key with anyone as they will be able to steal money from you!") }}
+                </p>
+            </div>
         </div>
-    </div>
     </div>
 </div>
 
