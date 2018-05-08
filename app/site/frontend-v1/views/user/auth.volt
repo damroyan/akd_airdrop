@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center m-b-md">
-                    <h3>{{ t.gettext('Login to Skeleton') }}</h3>
+                    <h3>{{ t.gettext('Login to') }} {{ config.system.projectName }}</h3>
                     <small>{{ t.gettext("It's only for the security reasons") }}!</small>
                 </div>
                 <div class="hpanel">
@@ -84,15 +84,6 @@
                             {{ hidden_field("redirect") }}
 
                         </form>
-                        <div class="text-center">
-                            <br />
-                            <a href="{{ url({'for': 'frontend-v1-user-authfb'}, { 'redirect': redirect }) }}" class="pull-left">
-                                <i class="fa fa-facebook-square"></i> {{ t.gettext('Enter via Facebook') }}
-                            </a>
-                            <a href="{{ url({'for': 'frontend-v1-user-authvk'}, { 'redirect': redirect }) }}" class="pull-right">
-                                <i class="fa fa-vk"></i> {{ t.gettext('Enter via VK') }}
-                            </a>
-                        </div>
                     </div>
 
                 </div>
@@ -101,7 +92,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                2006-till now <b>Skeleton</b> by Dmitry Amroyan
+                2006-till now <b>{{ config.system.projectName }}</b>
             </div>
         </div>
     </div>

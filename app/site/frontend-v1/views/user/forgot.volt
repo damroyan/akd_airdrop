@@ -1,7 +1,7 @@
 {% extends "layouts/minimal-layout.volt" %}
 
 {% block content %}
-    <div class="color-line"></div>
+   {# <div class="color-line"></div>
 
     <div class="back-link">
         <a href="{{ url({'for':'frontend-v1-user-auth'}) }}" class="btn btn-primary">{{ t.gettext('Back to Login') }}</a>
@@ -60,9 +60,9 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                2006-till now <b>Skeleton</b> by Dmitry Amroyan
+                2006-till now
             </div>
         </div>
-    </div>
+    </div>#}
 
 {% endblock %}

@@ -51,7 +51,10 @@ trait TraitFrontendV1Route {
             // CUSTOM роуты для разработки под каждый проект
             ['feedback', 'form', '/feedback/'],
 
-            ['company', 'my', '/company/my/']
+            ['offer','one'  ,'/offer/{offer_id:[a-z0-9\-]+}/'],
+
+            //['company', 'my', '/company/my/']
+
 
         ];
 

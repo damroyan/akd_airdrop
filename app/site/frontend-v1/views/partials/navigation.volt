@@ -3,16 +3,18 @@
     <div class="color-line">
     </div>
     <div id="logo" class="light-version">
+
         <span>
-            Skeleton
+             <img src="/front/img/logo.png" width="24">
+            {{ config.system.projectName }}
         </span>
     </div>
     <nav role="navigation">
         <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
         <div class="small-logo">
-            <span class="text-primary">Skeleton by D.A.</span>
+            <span class="text-primary">{{ config.system.projectName }}</span>
         </div>
-        <form
+        {#<form
                 role="search"
                 class="navbar-form-custom"
                 method="get"
@@ -20,8 +22,8 @@
             <div class="form-group">
                 <input type="text" placeholder="{{ t.gettext('Search is easy to use...') }}" class="form-control" name="q">
             </div>
-        </form>
-        <div class="mobile-menu">
+        </form>#}
+        {#<div class="mobile-menu">
             <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
                 <i class="fa fa-chevron-down"></i>
             </button>
@@ -41,7 +43,7 @@
                     {% endif %}
                 </ul>
             </div>
-        </div>
+        </div> #}
         <div class="navbar-right">
             <ul class="nav navbar-nav no-borders">
                 {% if user.user_id %}

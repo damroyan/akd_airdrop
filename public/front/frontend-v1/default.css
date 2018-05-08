@@ -30,3 +30,25 @@ ul.nav > li > a > sup {
     cursor: pointer;
 }
 
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+.chld-mt5 > div {
+    margin-top: 5px;
+}
+
+@media(max-width:768px) {
+    footer {
+        left: 0px !important;
+    }
+}
+
+.ico-icon {
+    width: 100%;
+    max-width: 100px;
+}
+

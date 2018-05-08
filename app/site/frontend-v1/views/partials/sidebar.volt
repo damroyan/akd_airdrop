@@ -29,6 +29,17 @@
                 <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('Main Page') }}</span></a>
             </li>
 
+            <li {% if active_tab == 'offers' %} class="active" {% endif %}>
+                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('Active Offers') }}</span></a>
+            </li>
+
+            <li {% if active_tab == 'closed_offers' %} class="active" {% endif %}>
+                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('Closed Offers') }}</span></a>
+            </li>
+
+            <li {% if active_tab == 'faq' %} class="active" {% endif %}>
+                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('FAQ') }}</span></a>
+            </li>
 
             {% if user.user_id %}
                 {# сюда пишем пункты меню авторизованного пользователя #}
@@ -74,9 +85,9 @@
                 </li>
             {% else %}
                 {# здесь пункты меню неавторизованного #}
-                <li>
-                    <a href="{{ url({'for':'frontend-v1-user-auth'}) }}">{{ t.gettext('Login in') }}</a>
-                </li>
+               {# <li>
+                    <a href="{{ url({'for':'frontend-v1-user-auth'}) }}">{{ t.gettext('Login') }}</a>
+                </li>#}
             {% endif %}
 
             {# а сюда все общие для любого типа пользователей #}

@@ -1,6 +1,24 @@
+<div class="row">
+    <div class="col-md-11">
+
+
+    <div class="hpanel">
+        <div class="panel-body text-center">
+            <h2>{{ t.gettext("Disclamer") }}</h2>
+            {{ config.system.projectName }}
+            {{ t.gettext("disclamer text") }}
+            <br><br>
+            <p class="text-danger">
+                {{ t.gettext("Please never share your private key with anyone as they will be able to steal money from you!") }}
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
 <footer class="footer">
         <span class="pull-right">
-            Current version based on <a href="http://wrapbootstrap.com/preview/WB055J451">HOMER ADMIN THEME</a>
+            <small>{{ t.gettext('cookie_text') }}</small>
         </span>
-    Dmitry Amroyan, 2005-till now
+    {{ config.system.projectName }}, 2018 (с)
 </footer>

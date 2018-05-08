@@ -2,7 +2,7 @@
 
 {% block content %}
 
-
+{#
     <div class="normalheader transition animated fadeIn">
         <div class="hpanel">
             <div class="panel-body">
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    {# todo save button && image size #}
+
     <div class="content animate-panel">
         <div class="hpanel">
             <div class="panel-heading">
@@ -187,5 +187,5 @@
             </div>
         </div>
     </div>
-
+#}
 {% endblock %}

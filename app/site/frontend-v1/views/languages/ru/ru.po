@@ -7,27 +7,556 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-12 17:30+0300\n"
-"PO-Revision-Date: 2016-05-12 17:45+0300\n"
+"POT-Creation-Date: 2018-05-08 19:16+0300\n"
+"PO-Revision-Date: 2018-05-08 19:16+0300\n"
 "Last-Translator: Dmitry Amroyan <da@mywishboard.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Basepath: ../../../../../..\n"
+"X-Poedit-KeywordsList: _;gettext;__;#_;T.gettext\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: app/site/frontend-v1/views\n"
+"X-Poedit-SearchPath-1: app/site/frontend-v1/controllers\n"
+"X-Poedit-SearchPath-2: app/site/api-v1\n"
+"X-Poedit-SearchPath-3: cache\n"
 
-msgid "Hello"
-msgstr "Привет, %s %d"
+#: app/site/api-v1/controllers/CompanyController.php:36
+#: app/site/api-v1/controllers/CompanyController.php:77
+msgid "Company was not found. Please contact support to fix this problem."
+msgstr "Компания не была найдена, Свяжитесь с поддержкой. "
+
+#: app/site/api-v1/controllers/CompanyController.php:48
+msgid "Company General data saved successfully"
+msgstr ""
+
+#: app/site/api-v1/controllers/CompanyController.php:66
+msgid ""
+"Company logo was not saved because of technical reasons (we not receive "
+"image). Please contact support."
+msgstr ""
+
+#: app/site/api-v1/controllers/FeedbackController.php:38
+msgid ""
+"Non supported feedback type received. Please contact with support directly "
+"via email."
+msgstr ""
+"Получен некорректный тип сообщения. Пожалуйста свяжитесь со службой "
+"поддержки по e-mail"
+
+#: app/site/api-v1/controllers/TokenController.php:157
+msgid "Registration was successfully completed. Your account was activated."
+msgstr "Регистрация завершена. Ваш аккаунт был активирован."
+
+#: app/site/api-v1/controllers/UploadController.php:144
+msgid "You try to download empty file"
+msgstr "Вы пытаетесь загрузить пустой файл"
+
+#: app/site/api-v1/controllers/UploadController.php:151
+msgid "Multiply download are not supported"
+msgstr "Загрузка сразу нескольких файлов не поддерживается"
+
+#: app/site/api-v1/controllers/UploadController.php:157
+msgid "Undefined file type"
+msgstr "Неопределенный тип файла"
+
+#: app/site/api-v1/controllers/UploadController.php:169
+msgid "File system error! Please contact with support"
+msgstr "Ошибка файловой системы. Пожалуйста свяжитесь со службой поддержки"
+
+#: app/site/api-v1/controllers/UserController.php:30
+msgid "User was delete successfully. Hope you will come to us in the future."
+msgstr "Пользователь был успешно удален. Надеемся увидеть вас снова в будущем!"
+
+#: app/site/api-v1/controllers/UserController.php:69
+msgid "Your profile data was saved successfully"
+msgstr "Данные вашего профиля были успешно сохранены"
+
+#: app/site/api-v1/controllers/UserController.php:85
+msgid "Old password are incorrect"
+msgstr "Старый пароль введен некорректно"
+
+#: app/site/api-v1/controllers/UserController.php:149
+msgid "Your password was changed successfully!"
+msgstr "Пароль был успешно изменен"
+
+#: app/site/api-v1/controllers/UserController.php:354
+msgid "User with such login are already exists"
+msgstr ""
+"Данное имя пользователя уже используется - попробуйте другое или "
+"воспользуйтесь восстановлением пароля"
+
+#: app/site/api-v1/controllers/UserController.php:358
+msgid "Password and password confirm are not matched"
+msgstr "Пароль и подтверждение пароля не совпадают"
+
+#: app/site/api-v1/controllers/UserController.php:456
+msgid ""
+"User registered sucessfully! Please check your email for the activation link"
+msgstr ""
+"Регистрация прошла успешно! Пожалуйста следуйте инструкциям в письме, "
+"отправленном на ваш e-mail чтобы активировать аккаунт"
+
+#: app/site/api-v1/controllers/UserController.php:463
+msgid "Data base error. Please try again later or contact with support now."
+msgstr ""
+
+#: app/site/api-v1/controllers/UserController.php:501
+msgid "User email was not found!"
+msgstr "Пользовательский e-mail не найден"
+
+#: app/site/api-v1/controllers/UserController.php:506
+msgid ""
+"User was deleted by you or moderators. Please contact to support if you want "
+"to re-open this account."
+msgstr ""
+"Пользователь был удален службой поддержки. Пожалуйста свяжитесь со службой "
+"поддержки если вы хотите использовать этот аккаунт"
+
+#: app/site/api-v1/controllers/UserController.php:520
+#: app/site/api-v1/controllers/UserController.php:651
+msgid ""
+"User was blocked by administrations. Please contact to support for more "
+"information."
+msgstr ""
+"Пользователь был заблокирован службой поддержки. Пожалуйста свяжитесь со "
+"службой поддержки для получения дополнительной информации"
+
+#: app/site/api-v1/controllers/UserController.php:578
+msgid "Data base transaction error"
+msgstr "Ошибка баз данных"
+
+#: app/site/api-v1/controllers/UserController.php:621
+#: app/site/api-v1/controllers/UserController.php:625
+msgid "Incorrect pair email/password"
+msgstr "Неправильный e-mail/пароль"
+
+#: app/site/api-v1/controllers/UserController.php:642
+msgid ""
+"This account was deleted. If you did not do this or you want to reestablish "
+"an account please contact with support."
+msgstr ""
+"Данный аккаунт был удален. Если вы хотите восстановить его - пожалуйста "
+"свяжитесь со службой поддержки"
+
+#: app/site/api-v1/controllers/UserController.php:646
+msgid ""
+"User was not activated via link from email. Please activate user or contact "
+"with support."
+msgstr ""
+"Пользователь не активировал аккаунт по ссылке из e-mail. Пожалуйста "
+"активируйте аккаунт или свяжитесь со службой поддержки"
+
+#: app/site/api-v1/controllers/UserController.php:729
+msgid ""
+"New User Photo was not saved because of technical reasons (we not receive "
+"image). Please contact support."
+msgstr ""
+"Новое изображение профиля не было сохранено по техническим причинам (мы не "
+"получили изображение). Пожалуйста свяжитесь со службой поддержки"
+
+#: app/site/api-v1/validators/CompanyEdit.php:20
+msgid "Company name is Required!"
+msgstr ""
+
+#: app/site/api-v1/validators/CompanyEdit.php:25
+msgid "Length of Description should be less than 1000 symbols"
+msgstr ""
+
+#: app/site/api-v1/validators/Feedback.php:16
+msgid "User name id requireble for feedback"
+msgstr "ID пользователя должно быть обязательно указано для отправки сообщения"
+
+#: app/site/api-v1/validators/Feedback.php:22
+msgid "The name should be less than 255 symbols"
+msgstr "Имя должно быть меньше 255 символов"
+
+#: app/site/api-v1/validators/Feedback.php:23
+msgid "Name should have at list one symbol"
+msgstr "Имя должно содержать хотя бы 1 символ"
+
+#: app/site/api-v1/validators/Feedback.php:27
+msgid "Email is incorrect"
+msgstr "Неправильно указан e-mail"
+
+#: app/site/api-v1/validators/Feedback.php:36
+msgid "Description are required"
+msgstr "Описание обязательно для заполнени"
+
+#: app/site/api-v1/validators/UserAuth.php:12
+msgid "User login is required"
+msgstr "Необходимо выполнить вход в систему"
+
+#: app/site/api-v1/validators/UserAuth.php:16
+msgid "Email you provide are incorrect"
+msgstr "E-mail введен неправильно"
+
+#: app/site/api-v1/validators/UserAuth.php:21
+msgid "Password are required"
+msgstr "Пароль обязателен"
+
+#: app/site/api-v1/validators/UserEdit.php:19
+msgid "User login/email is a required field"
+msgstr "Имя пользователя и e-mail обязательны"
+
+#: app/site/api-v1/validators/UserEdit.php:23
+msgid "User email are incorrect"
+msgstr "E-mail указан некорректно"
+
+#: app/site/api-v1/validators/UserEdit.php:28
+msgid "User First Name are required"
+msgstr "Имя пользователя обязательно к заполнению"
+
+#: app/site/api-v1/validators/UserEdit.php:33
+msgid "The length of user first name should be less than 32 symbols"
+msgstr "Длина имени пользователя должна быть меньше 32 символов"
+
+#: app/site/api-v1/validators/UserEdit.php:37
+msgid "Last Name is a required field"
+msgstr "Фамилия это обязательное поле"
+
+#: app/site/api-v1/validators/UserEdit.php:42
+msgid "Length of Last Name should be less than 50 symbols"
+msgstr "Длина фамилии пользователя должна быть меньше 50 символов"
+
+#: app/site/api-v1/validators/UserEdit.php:47
+msgid "User Name should be less than 32 symbols"
+msgstr "Имя пользователя должно быть меньше 32 символов"
+
+#: app/site/api-v1/validators/UserEdit.php:53
+msgid "User role are incorrect"
+msgstr "Роль пользователя указана некорректно"
+
+#: app/site/api-v1/validators/UserPasswordChange.php:11
+msgid "New password is a required field"
+msgstr "Новый пароль обязателен"
+
+#: app/site/api-v1/validators/UserPasswordChange.php:15
+msgid "Password confirm is required field"
+msgstr "Подтверждение пароля обязательно"
+
+#: app/site/api-v1/validators/UserRegistration.php:13
+msgid "User login is required field"
+msgstr "Необходимо ввести имя пользователя"
+
+#: app/site/api-v1/validators/UserRegistration.php:17
+msgid "Email that you provide are incorrect"
+msgstr "E-mail указан некорректно"
+
+#: app/site/api-v1/validators/UserRegistration.php:22
+msgid "User password is a required field"
+msgstr "Пароль обязателен"
+
+#: app/site/api-v1/validators/UserRegistration.php:26
+msgid "Password confirm field is required"
+msgstr "Подтверждение пароля обязательно"
+
+#: app/site/api-v1/validators/UserRegistration.php:30
+msgid "User Firstname is a required field"
+msgstr "Имя пользователя обязательно к заполнению"
+
+#: app/site/api-v1/validators/UserRegistration.php:35
+msgid "First name should be less than 50 symbols"
+msgstr "Имя пользователя должно быть короче 50 символов"
+
+#: app/site/api-v1/validators/UserRegistration.php:39
+msgid "User lastn ame is a required field"
+msgstr "Фамилия пользователя обязательна к заполнению"
+
+#: app/site/api-v1/validators/UserRegistration.php:44
+msgid "Last Name should be less than 50 symbols"
+msgstr "Фамилия должна быть меньше 50 символов"
+
+#: app/site/api-v1/validators/UserRegistration.php:49
+msgid "Username should be less than 32 symbols"
+msgstr "Логин должен быть меньше 32 символов"
+
+#: app/site/frontend-v1/controllers/CompanyController.php:34
+#, php-format
+msgid "%s Company"
+msgstr ""
+
+#: app/site/frontend-v1/controllers/ErrorController.php:23
+msgid "Bad Request"
+msgstr "Некорректный запрос"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:27
+#: app/site/frontend-v1/controllers/ErrorController.php:82
+msgid "Unauthorized"
+msgstr "Не авторизирован"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:31
+msgid "Forbidden"
+msgstr "Запрещено"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:35
+#: app/site/frontend-v1/controllers/ErrorController.php:48
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:39
+#: app/site/frontend-v1/controllers/ErrorController.php:133
+#: app/site/frontend-v1/controllers/ErrorController.php:138
+msgid "Internal Server Error"
+msgstr "Внутренняя ошибка сервера"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:43
+#: app/site/frontend-v1/controllers/ErrorController.php:151
+#: app/site/frontend-v1/controllers/ErrorController.php:156
+msgid "Service Unavailable"
+msgstr "Сервис недоступен"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:71
+msgid "User blocked! Please contact support for more info."
+msgstr ""
+"Пользователь был заблокирован. Пожалуйста свяжитесь со службой поддержки"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:87
+msgid "You need login in to use this app."
+msgstr "Необходимо зарегистрироваться для использования этого приложения"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:98
+#: app/site/frontend-v1/controllers/ErrorController.php:103
+#: app/site/frontend-v1/controllers/ErrorController.php:169
+#: app/site/frontend-v1/controllers/ErrorController.php:174
+msgid "Permission Denied"
+msgstr "Доступ запрещен"
+
+#: app/site/frontend-v1/controllers/ErrorController.php:117
+#: app/site/frontend-v1/controllers/ErrorController.php:122
+msgid "Page was not found"
+msgstr "Страница не найдена"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:25
+msgid "Page was not found!"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:27
+msgid ""
+"Sorry, but the page you are looking for has note been found. Try checking "
+"the URL for error, then hit the refresh button on your browser or try found "
+"something else in our app."
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:30
+msgid "Go to main page"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:35
+msgid "Send feedback!"
+msgstr "Отправить сообщение"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:37
+msgid "We will be happy to help you in any reason"
+msgstr "Мы будем рады вам помочь"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:51
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:63
+msgid "Request Type"
+msgstr "Тип вопроса"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:66
+msgid "Technical issues"
+msgstr "Технические вопросы"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:67
+msgid "Financial issues"
+msgstr "Финансовые вопросы"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:68
+msgid "Other"
+msgstr "Другое"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:73
+msgid "Message"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:78
+msgid "Send"
+msgstr "Отправить"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:31
+msgid "new"
+msgstr "Свежак!"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:56
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:38
+msgid "Estimated value"
+msgstr "~ доход"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:60
+msgid "dedline"
+msgstr "Действует до"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:67
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:40
+msgid "Views"
+msgstr "Просмотров"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:72
+msgid "Get"
+msgstr "Получить!"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:60
+msgid "Activate offer"
+msgstr "Получить монеты"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:67
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:12
+msgid ""
+"Please never share your private key with anyone as they will be able to "
+"steal money from you!"
+msgstr ""
+"НИКОГДА! не отправляйте свой приватный ключ кому-либо потому что этот кто-то "
+"украдет ваши монеты!"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:7
+msgid "Disclamer"
+msgstr "Отказ от ответственности"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:9
+msgid "disclamer text"
+msgstr ""
+"предоставляет бесплатный сервис для людей, которые ищут ссылки на AIRDROP и "
+"другие акции по бесплатной или мотивированной раздаче крипто-монет. Наш "
+"сервис не является владельцем какого либо сайта на который вы можете перейти "
+"с нашего сайта или валюты размещенной на нем. Мы стараемся максимально "
+"проанализировать все предложения, которые мы размещаем на нашем сайте однако "
+"не несем ответственность за любые действия, потери, конфликты или любого "
+"рода проблемы, которые Вы можете получить перейдя по ссылкам с нашего сайта "
+"и дальнейшие действия там. "
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:21
+msgid "cookie_text"
+msgstr ""
+"Данный сайт использует технологию Cookies, позволяющую анализировать "
+"поведение пользователей на сайте. Если вы не согласны с этим - покиньте этот "
+"сайт."
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:5
+msgid "Featured offers"
+msgstr "Популярные офферы"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:10
+msgid "Ends in"
+msgstr "Закроется через"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:10
+msgid "views"
+msgstr "показ(ов)"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:15
+msgid "More"
+msgstr "Подробнее"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:18
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:81
+msgid "Profile"
+msgstr "Профиль"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:20
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:84
+msgid "Logout"
+msgstr "Выход"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:29
+msgid "Main Page"
+msgstr "Главная"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:33
+msgid "Active Offers"
+msgstr "Активные офферы"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:37
+msgid "Closed Offers"
+msgstr "Прошедшие офферы"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:41
+msgid "FAQ"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:48
+msgid "My Company"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:58
+msgid "Users"
+msgstr "Пользователи"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:68
+msgid "List"
+msgstr "Список"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:72
+msgid "Auth History"
+msgstr "Статистика входов"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:94
+msgid "Feedback"
+msgstr "Обратная связь"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_user_message.volt.php:4
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:19
+msgid "Back to Index"
+msgstr "Вернуться на главную"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:26
+msgid "Login to"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:27
+msgid "It's only for the security reasons"
+msgstr "Исключительно в целях безопасности"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:39
+msgid "Email"
+msgstr "Email"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:44
+msgid "Password"
+msgstr "Пароль"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:62
+msgid "Forgоt password?"
+msgstr "Забыли пароль?"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:68
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:76
+msgid "Login"
+msgstr "Войти"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:78
+msgid "Register"
+msgstr "Регистрация"
+
+#~ msgid "Login in"
+#~ msgstr "Идет вход"
+
+#~ msgid "Hello"
+#~ msgstr "Привет, %s %d"
 
 # версия для множественного числа
-msgid "File"
-msgid_plural "Files"
-msgstr[0] "Файл"
-msgstr[1] "Файла"
-msgstr[2] "%d Файлов"
+#~ msgid "File"
+#~ msgid_plural "Files"
+#~ msgstr[0] "Файл"
+#~ msgstr[1] "Файла"
+#~ msgstr[2] "%d Файлов"
 
 # версия для множественного числа
 #~ msgid "File\" # ID использования в код"

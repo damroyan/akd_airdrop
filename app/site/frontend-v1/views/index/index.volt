@@ -2,51 +2,71 @@
 
 {% block content %}
     <div class="content animate-panel">
-        <div class="hpanel blog-article-box">
-            <div class="panel-heading">
-                <h4>Skeleton Startup FAUC MVP приветсвует тебя</h4>
-                <small>FAUC MVP - Fast As yoU Can Minimal Viable Product </small>
-                <div class="text-muted small">
-                    Created by: <span class="font-bold">Dmitry Amroyan</span>
-                </div>
+        <div class="row">
+            <div class="col-md-9">
+                {% for i in [1,2,3] %}
+                    {# отображение Projects #}
+
+                    <div class="hpanel col-md-6">
+                        <div class="panel-body">
+                            <span class="label label-success pull-right">{{ t.gettext('new') }}</span>
+                            <div class="row">
+                                <div class="col-sm-3 project-info">
+                                    <div class="project-action m-t-md text-center">
+                                        <a href="">
+                                            <img src="/front/img/logos/opet-foundation.jpg" class="ico-icon" />
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="badges">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4><a href="{{ url({'for':'frontend-v1-offer-one','offer_id':1}) }}"> Opet Foundation (OPET) </a></h4>
+
+                                    <div class="row chld-mt5">
+                                        <div class="col-sm-5">
+                                            <div class="project-label font-uppercase">{{ t.gettext('Estimated value') }}</div>
+                                            $0.5
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="project-label font-uppercase">{{ t.gettext('dedline') }}</div>
+                                            <small>12.06.2015</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt10 chld-mt5">
+                                        <div class="col-sm-4">
+                                            <div class="project-label font-uppercase"><small>{{ t.gettext('Views') }}</small></div>
+                                            123
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <a class="btn btn-success">
+                                                {{ t.gettext('Get') }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-            <div class="panel-body">
-                <p>Привет, <b>{% if user.user_id %} {{ user.getName() }} {% else %} Незнакомец {% endif %}!</b></p>
 
-                <p>Это главная страница базового проекта. Цель и задача - быстрое разворачивание твоих идей. Здесь я наверное буду описывать какие-то основные моменты как этим пользоваться.
-                    Начальная комплектация должна содержать в себе модули:
-                </p>
+            {{ partial('right_col') }}
 
-                <p>
-                    <h4>Физические:</h4>
-                    <ul>
-                        <li>Пользователя (регистрация, авторизация, напоминалка пароля, смена пароля, выход)</li>
-                        <li>Фидбека</li>
-                        <li>Админка к этому</li>
-                    </ul>
-                </p>
-
-                <p>
-                    <h4>Технические:</h4>
-                    <ul>
-                        <li>Локализации</li>
-                        <li>Хелперы</li>
-                        <li>Отправка мейлов</li>
-                    </ul>
-                </p>
-                <p>
-                    Подробно компоненты и их использование должны быть описаны здесь: <a href="https://bitbucket.org/damroyan/skeleton/wiki/browse/" target="_blank">WIKI</a>
-                </p>
-
-                <p>
-                    Короче, если ты это видишь, значит проект завелся, теперь можно начинать навешивать все, что тебе кажется нужным навешивать.
-                </p>
-
-                <p>
-                    Удачи! Новые идеи это всегда круто :)
-                </p>
-            </div>
         </div>
+
     </div>
+
 
 {% endblock %}
