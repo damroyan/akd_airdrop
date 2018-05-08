@@ -46,7 +46,10 @@
         </div> #}
         <div class="navbar-right">
             <ul class="nav navbar-nav no-borders">
-                {% if user.user_id %}
+                <li>
+                    <a href=""><i class="fa fa-telegram text-info"></i></a>
+                </li>
+               {# {% if user.user_id %}
                     <li>
                         <a href="{{ url({'for':'frontend-v1-user-logout'}) }}">
                             <i class="pe-7s-upload pe-rotate-90"></i>
@@ -58,7 +61,7 @@
                             <i class="pe-7s-upload pe-rotate-270"></i>
                         </a>
                     </li>
-                {% endif %}
+                {% endif %}#}
             </ul>
         </div>
     </nav>

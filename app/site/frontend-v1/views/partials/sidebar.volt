@@ -96,7 +96,6 @@
                     <span class="nav-label">{{ t.gettext('Feedback') }}</span>
                 </a>
             </li>
-
         </ul>
     </div>
 </aside>
