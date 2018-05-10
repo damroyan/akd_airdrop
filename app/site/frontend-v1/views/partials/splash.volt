@@ -2,9 +2,8 @@
 <div class="splash">
     <div class="color-line"></div>
     <div class="splash-title">
-        <h1>SKELETON LOADING</h1>
-        <p> It's a startup theme skeleton to Fast As U Can MVP Development
-            <br /> <b>FAUC MVP, Carl!</b> :)  </p>
+        <h1>{{ t.gettext('Loading...') }}</h1>
+        <p>{{ t.gettext('Please whaiting while loading') }}</p>
         <div class="spinner">
             <div class="rect1"></div>
             <div class="rect2"></div>
