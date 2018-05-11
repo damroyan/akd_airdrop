@@ -3,11 +3,12 @@
     <div class="color-line">
     </div>
     <div id="logo" class="light-version">
-
-        <span>
-             <img src="/front/img/logo.png" width="24">
-            {{ config.system.projectName }}
-        </span>
+        <a href="/">
+            <span>
+                 <img src="/front/img/logo.png" width="24">
+                {{ config.system.projectName }}
+            </span>
+        </a>
     </div>
     <nav role="navigation">
         <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>

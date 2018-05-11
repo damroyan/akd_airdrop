@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-08 19:16+0300\n"
-"PO-Revision-Date: 2018-05-08 19:16+0300\n"
+"POT-Creation-Date: 2018-05-10 17:57+0300\n"
+"PO-Revision-Date: 2018-05-10 18:10+0300\n"
 "Last-Translator: Dmitry Amroyan <da@mywishboard.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -33,13 +33,15 @@ msgstr "Компания не была найдена, Свяжитесь с п�
 
 #: app/site/api-v1/controllers/CompanyController.php:48
 msgid "Company General data saved successfully"
-msgstr ""
+msgstr "Данные успешно сохранены"
 
 #: app/site/api-v1/controllers/CompanyController.php:66
 msgid ""
 "Company logo was not saved because of technical reasons (we not receive "
 "image). Please contact support."
 msgstr ""
+"Мы не смогли загрузить логотип компании :( Если вы уверены, что это "
+"техническая ошибка - свяжитесь с саппортом"
 
 #: app/site/api-v1/controllers/FeedbackController.php:38
 msgid ""
@@ -104,7 +106,7 @@ msgstr ""
 
 #: app/site/api-v1/controllers/UserController.php:463
 msgid "Data base error. Please try again later or contact with support now."
-msgstr ""
+msgstr "Ошибка баз данных"
 
 #: app/site/api-v1/controllers/UserController.php:501
 msgid "User email was not found!"
@@ -162,11 +164,11 @@ msgstr ""
 
 #: app/site/api-v1/validators/CompanyEdit.php:20
 msgid "Company name is Required!"
-msgstr ""
+msgstr "Название компаниии обязательно"
 
 #: app/site/api-v1/validators/CompanyEdit.php:25
 msgid "Length of Description should be less than 1000 symbols"
-msgstr ""
+msgstr "Длина описания не должна превышать 1000 символов"
 
 #: app/site/api-v1/validators/Feedback.php:16
 msgid "User name id requireble for feedback"
@@ -279,7 +281,7 @@ msgstr "Логин должен быть меньше 32 символов"
 #: app/site/frontend-v1/controllers/CompanyController.php:34
 #, php-format
 msgid "%s Company"
-msgstr ""
+msgstr "%s Компания"
 
 #: app/site/frontend-v1/controllers/ErrorController.php:23
 msgid "Bad Request"
@@ -334,7 +336,7 @@ msgstr "Страница не найдена"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:25
 msgid "Page was not found!"
-msgstr ""
+msgstr "Страница не найдена"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:27
 msgid ""
@@ -342,10 +344,12 @@ msgid ""
 "the URL for error, then hit the refresh button on your browser or try found "
 "something else in our app."
 msgstr ""
+"Мы не смогли обнаружить страницу, но вы не расстраивайтесь! Проверьте "
+"правильность URL или вернитесь на главную"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:30
 msgid "Go to main page"
-msgstr ""
+msgstr "На главную"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:35
 msgid "Send feedback!"
@@ -377,39 +381,39 @@ msgstr "Другое"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:73
 msgid "Message"
-msgstr ""
+msgstr "Сообщение"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:78
 msgid "Send"
 msgstr "Отправить"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:31
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:32
 msgid "new"
 msgstr "Свежак!"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:56
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:38
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:57
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:37
 msgid "Estimated value"
 msgstr "~ доход"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:60
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:61
 msgid "dedline"
 msgstr "Действует до"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:67
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:40
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:68
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:39
 msgid "Views"
 msgstr "Просмотров"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:72
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:73
 msgid "Get"
 msgstr "Получить!"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:60
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:59
 msgid "Activate offer"
 msgstr "Получить монеты"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:67
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:66
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:12
 msgid ""
 "Please never share your private key with anyone as they will be able to "
@@ -441,15 +445,15 @@ msgstr ""
 "поведение пользователей на сайте. Если вы не согласны с этим - покиньте этот "
 "сайт."
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:5
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:6
 msgid "Featured offers"
 msgstr "Популярные офферы"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:10
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:11
 msgid "Ends in"
 msgstr "Закроется через"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:10
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:11
 msgid "views"
 msgstr "показ(ов)"
 
@@ -485,7 +489,7 @@ msgstr ""
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:48
 msgid "My Company"
-msgstr ""
+msgstr "Моя компания"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:58
 msgid "Users"
@@ -503,6 +507,14 @@ msgstr "Статистика входов"
 msgid "Feedback"
 msgstr "Обратная связь"
 
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_splash.volt.php:5
+msgid "Loading..."
+msgstr "Загружается…"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_splash.volt.php:6
+msgid "Please whaiting while loading"
+msgstr "Ожидайте загрузки"
+
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_user_message.volt.php:4
 msgid ""
 "You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
@@ -515,7 +527,7 @@ msgstr "Вернуться на главную"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:26
 msgid "Login to"
-msgstr ""
+msgstr "Авторизоваться"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:27
 msgid "It's only for the security reasons"
