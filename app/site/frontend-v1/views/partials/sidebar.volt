@@ -42,12 +42,6 @@
             </li>
 
             {% if user.user_id %}
-                {# сюда пишем пункты меню авторизованного пользователя #}
-                <li class="{% if preg_match('@^company_@ui', active_tab) %} active {% endif %}">
-                    <a href="{{ url({'for':'frontend-v1-company-my'}) }}">
-                        <span class="nav-label">{{ t.gettext('My Company') }}</span>
-                    </a>
-                </li>
 
                 {# если нужна дополнительная фильтрация в зависимости от роли пользвоателя #}
                 {% if user.user_role == 'admin' %}
@@ -55,7 +49,7 @@
 
                     <li class=" {% if preg_match('@^user_@ui', active_tab) %} active {% endif %} ">
                         <a href="javascript:;">
-                            <span class="nav-label">{{ t.gettext('Users') }}</span>
+                            <span class="nav-label">{{ t.gettext('Офферы') }}</span>
                             <sup>admin</sup>
 
 
@@ -64,12 +58,12 @@
 
                         <ul class="nav nav-second-level">
                             <li class=" {% if preg_match('@^user_user@ui', active_tab) %} active {% endif %} ">
-                                <a href="{{ url({'for': 'backend-v1-user-index'}) }}">
-                                    {{ t.gettext('List') }}</a></li>
+                                <a href="{{ url({'for': 'backend-v1-offer-list'}) }}">
+                                    {{ t.gettext('Список') }}</a></li>
 
                             <li class=" {% if preg_match('@^user_accesslog@ui', active_tab) %} active {% endif %} ">
-                                <a href="{{ url({'for': 'backend-v1-user-accesslog'}) }}">
-                                    {{ t.gettext('Auth History') }}</a></li>
+                                <a href="{{ url({'for': 'backend-v1-offer-edit'}) }}">
+                                    {{ t.gettext('Создать новый') }}</a></li>
                         </ul>
                     </li>
 

@@ -25,6 +25,11 @@ trait TraitBackendV1Route {
 
             ['token', 'index', '/token/'],
 
+            ['offer', 'list', '/offers/'],
+            ['offer', 'edit', '/offer/edit/'],
+
+
+
         ];
 
         foreach($array as $value) {
