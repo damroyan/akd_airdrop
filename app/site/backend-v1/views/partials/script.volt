@@ -61,6 +61,8 @@
                 'app':                      '/front/backend-v1/app',
                 'app/lang':                 '/front/backend-v1/lang',
 
+                'ckeditor':                 '/front/ckeditor/ckeditor',
+
                 'bootstrap':                '/front/bootstrap/js/bootstrap',
 
                 'jquery':                   'lib/jquery',

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="hpanel">
     <h2>
         Оффер /
     {% if o.offer_id %}
@@ -15,52 +15,7 @@
 
     <hr />
 
-    <!--<div class="hpanel">-->
-        <!--<div class="panel-heading">-->
-            <!--<div class="panel-title"> <i class="fa fa-photo"></i> {{ t.gettext('Photo or Logo') }}</div>-->
-        <!--</div>-->
-        <!--<div class="panel-body">-->
-            <!--<div class="vertical-align">-->
 
-                <!--<div class="text-center admin-upload-image-block js-image-upload"-->
-                     <!--style="width: 190px !important;"-->
-                     <!--data-image-blank="/front/nologo.png"-->
-                     <!--data-callback="user_picture"-->
-                     <!--data-field-selector="input[name='user_picture']">-->
-                    <!--<img src="{% if user.user_picture %}{{ image_path(user.user_picture, 140, 140, '1x1', 'png', true) }}{% else %}/front/nologo.png{% endif %}"-->
-                         <!--class="img-circle m-b"-->
-                         <!--data-element="user_picture"-->
-                         <!--style="display: block; width: 140px !important; height: 140px !important;"-->
-                         <!--alt="" />-->
-
-                    <!--<div class="fileinput-button"-->
-                         <!--data-fileupload-ration="140x140_hires">-->
-                        <!--<input type="file" name="file" class="fileinput" />-->
-                    <!--</div>-->
-
-                    <!--{{ hidden_field("user_picture") }}-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--{{ t.gettext('Please click on image to download new one ') | escape}}-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="panel-footer">-->
-            <!--{{ t.gettext('Good image will looks better in account.') }}-->
-            <!--{% if user.user_picture is not null and user.user_picture!='' %}-->
-            <!--<u>-->
-                <!--<a href="javascript:;"-->
-                   <!--data-confirm="true"-->
-                   <!--data-confirm-message="{{ t.gettext('Are you sure you want delete your image?')|escape_attr }}"-->
-                   <!--data-url="{{ url({'for':'api-v1-user-pictureClean'})  }}">-->
-
-                    <!--{{ t.gettext('Delete existing one') | escape }}-->
-
-                <!--</a>-->
-            <!--</u>-->
-            <!--{% endif %}-->
-        <!--</div>-->
-    <!--</div>-->
 
     <hr />
 
@@ -70,7 +25,7 @@
               method="post"
               class="form-horizontal js-form"
               data-url="{{ url({'for': 'api-v1-offer-edit'}) }}"
-              data-redirect-url="{{ url({'for': 'backend-v1-offer-list'}) }}"
+              data-redirect-url="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': o.offer_id}) }}"
         >
 
             <div class="form-group">
@@ -82,6 +37,19 @@
                     'class': 'form-control'
                     ) }}
                 </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="label-for-user_login" class="col-sm-2 control-label">
+                    Код валюты</label>
+                <div class="col-sm-10">
+                    {{ text_field(
+                    "offer_code",
+                    'class': 'form-control'
+                    ) }}
+                </div>
+
             </div>
 
             <hr>
@@ -95,18 +63,6 @@
                     static("\Model\Offer", "getTypeArray"),
                     'class': 'form-control',
                     'id': 'label-for-user_role'
-                    ) }}
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="label-for-user_name" class="col-sm-2 control-label">
-                    Описание</label>
-                <div class="col-sm-10">
-                    {{ text_area(
-                    "offer_description",
-                    'class': 'form-control',
-                    'id': 'editor'
                     ) }}
                 </div>
             </div>
@@ -232,7 +188,7 @@
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="submit" class="btn btn-primary">Сохранить и продолжить</button>
                 </div>
             </div>
             {{ hidden_field('offer_id') }}
@@ -244,3 +200,4 @@
 </div>
 
 {% endblock %}
+

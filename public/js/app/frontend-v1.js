@@ -2,7 +2,7 @@ define(['jquery',
     'jed',
     'app/core',
     'bootstrap'
-], function($, core) {
+], function($, jed, core) {
     console.log('[app]', 'Init');
 
     require(['app/homer']);
@@ -29,6 +29,12 @@ define(['jquery',
         });
 
      */
+
+
+    $('#editor:eq(0)').each(function() {
+        require(['app/descedit']);
+    });
+
 
     // Initialize popover
     $('[data-toggle="popover"]').popover();
@@ -137,10 +143,13 @@ define(['jquery',
                 field = $(this).data('fieldSelector')
             ;
 
+            var urlParams = new URLSearchParams(window.location.search);
+            var offer_id = urlParams.get('offer_id');
             core.request(
-                '/api/v1/user/picture/',
+                '/api/v1/offer/picture/',
                 {
-                    'user_picture': $(field, obj).val()
+                    'user_picture': $(field, obj).val(),
+                    'offer_id': offer_id
                 },
                 function(response) {
 

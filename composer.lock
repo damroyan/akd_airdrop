@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c115a31d501c812c2b86dda2e46eb553",
+    "hash": "c2087caec363be5f08f817ddd88ea04c",
+    "content-hash": "19150526cd3c8e89a9917f0e4b06d96b",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -54,7 +55,48 @@
                 "upload",
                 "widget"
             ],
-            "time": "2018-02-20T06:20:24+00:00"
+            "time": "2018-02-20 06:20:24"
+        },
+        {
+            "name": "ckeditor/ckeditor",
+            "version": "4.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ckeditor/ckeditor-releases.git",
+                "reference": "993eb4fba6a70545f6c50da1988d39ecd9cf47a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/993eb4fba6a70545f6c50da1988d39ecd9cf47a3",
+                "reference": "993eb4fba6a70545f6c50da1988d39ecd9cf47a3",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "http://cksource.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor.",
+            "homepage": "http://ckeditor.com",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2018-04-18 09:04:40"
         },
         {
             "name": "components/jquery",
@@ -96,7 +138,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2018-03-04T13:23:48+00:00"
+            "time": "2018-03-04 13:23:48"
         },
         {
             "name": "components/jqueryui",
@@ -181,7 +223,7 @@
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "time": "2016-09-16T05:47:55+00:00"
+            "time": "2016-09-16 05:47:55"
         },
         {
             "name": "drmonty/animate.css",
@@ -215,7 +257,7 @@
             ],
             "description": "A cross-browser library of CSS animations. As easy to use as an easy thing.",
             "homepage": "http://daneden.github.io/animate.css",
-            "time": "2016-06-07T06:29:18+00:00"
+            "time": "2016-06-07 06:29:18"
         },
         {
             "name": "fortawesome/font-awesome",
@@ -263,7 +305,51 @@
                 "font",
                 "icon"
             ],
-            "time": "2016-10-24T15:52:54+00:00"
+            "time": "2016-10-24 15:52:54"
+        },
+        {
+            "name": "froala/wysiwyg-editor",
+            "version": "v2.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/froala/wysiwyg-editor.git",
+                "reference": "a07268ceecff70dbd696ab48f28af88a0c820123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/froala/wysiwyg-editor/zipball/a07268ceecff70dbd696ab48f28af88a0c820123",
+                "reference": "a07268ceecff70dbd696ab48f28af88a0c820123",
+                "shasum": ""
+            },
+            "type": "component",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Froala Labs",
+                    "email": "support@froala.com"
+                }
+            ],
+            "description": "A beautiful jQuery WYSIWYG HTML rich text editor. High performance and modern design make it easy to use for developers and loved by users.",
+            "homepage": "https://www.froala.com/wysiwyg-editor",
+            "keywords": [
+                "editor",
+                "froala",
+                "froala-editor",
+                "froala-wysiwyg",
+                "html",
+                "javascript",
+                "jquery",
+                "jquery-plugin",
+                "rich editor",
+                "rich text editor",
+                "rte",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2018-04-26 09:08:13"
         },
         {
             "name": "gettext/gettext",
@@ -386,7 +472,7 @@
                 "translations",
                 "unicode"
             ],
-            "time": "2017-03-23T17:02:28+00:00"
+            "time": "2017-03-23 17:02:28"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -451,7 +537,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-04-22T15:46:56+00:00"
+            "time": "2018-04-22 15:46:56"
         },
         {
             "name": "guzzlehttp/promises",
@@ -502,7 +588,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20T10:07:11+00:00"
+            "time": "2016-12-20 10:07:11"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -567,7 +653,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20T17:10:46+00:00"
+            "time": "2017-03-20 17:10:46"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -644,7 +730,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2016-11-11T18:43:20+00:00"
+            "time": "2016-11-11 18:43:20"
         },
         {
             "name": "mmucklo/inflect",
@@ -694,7 +780,7 @@
                 "singularize",
                 "urlify"
             ],
-            "time": "2015-05-16T04:16:08+00:00"
+            "time": "2015-05-16 04:16:08"
         },
         {
             "name": "onokumus/metismenu",
@@ -736,7 +822,7 @@
                 "plugin",
                 "web"
             ],
-            "time": "2018-04-22T22:08:11+00:00"
+            "time": "2018-04-22 22:08:11"
         },
         {
             "name": "psr/http-message",
@@ -786,7 +872,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "robloach/component-installer",
@@ -834,7 +920,7 @@
                 }
             ],
             "description": "Allows installation of Components via Composer.",
-            "time": "2015-08-10T12:35:38+00:00"
+            "time": "2015-08-10 12:35:38"
         },
         {
             "name": "symfony/process",
@@ -883,7 +969,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-03T05:22:50+00:00"
+            "time": "2018-04-03 05:22:50"
         },
         {
             "name": "twitter/bootstrap",
@@ -934,7 +1020,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2016-07-25T15:51:55+00:00"
+            "time": "2016-07-25 15:51:55"
         },
         {
             "name": "zendesk/zendesk_api_client_php",
@@ -975,7 +1061,7 @@
             ],
             "description": "PHP Client for Zendesk REST API. See https://developer.zendesk.com/rest_api/docs/core/introduction .",
             "homepage": "https://github.com/zendesk/zendesk_api_client_php",
-            "time": "2018-01-30T06:21:17+00:00"
+            "time": "2018-01-30 06:21:17"
         }
     ],
     "packages-dev": [],

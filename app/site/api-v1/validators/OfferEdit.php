@@ -21,11 +21,6 @@ class OfferEdit extends Validation  {
             'message'       => __('Тип выбран некорректно'),
         )));
 
-        $this->add('offer_description', new PresenceOf(array(
-            'message'       => __('Описание это обязательное поле')
-        )));
-
-
         $this->add('offer_url', new PresenceOf(array(
             'message'       => __('Ссылка на оффер это обязательное поле')
         )));

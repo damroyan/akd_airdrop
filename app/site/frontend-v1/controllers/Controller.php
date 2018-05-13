@@ -8,6 +8,9 @@ namespace Site\FrontendV1\Controllers;
  * @package Site\FrontendV1\Controllers
  */
 class Controller extends \Controller {
+
+    const LIMIT_LIST = 50;
+
     public function initialize() {
         /*
  * CORE get GLOBAL messages -- START

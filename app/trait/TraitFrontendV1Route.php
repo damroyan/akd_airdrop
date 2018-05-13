@@ -52,6 +52,14 @@ trait TraitFrontendV1Route {
             ['feedback', 'form', '/feedback/'],
 
             ['offer','one'  ,'/offer/{offer_id:[a-z0-9\-]+}/'],
+            ['offer','page'  ,'/offer/page/{offer_id:[a-z0-9\-]+}/'],
+            ['offer', 'list', '/offers/'],
+            ['offer', 'edit', '/offer/edit/'],
+
+
+            ['offer', 'descedit', '/offer/descripiton/edit/'],
+
+
 
             //['company', 'my', '/company/my/']
 

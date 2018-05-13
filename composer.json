@@ -9,6 +9,8 @@
         "components/jqueryui": "^1.12",
         "drmonty/animate.css": "^3.5",
         "zendesk/zendesk_api_client_php": "^2.2",
-        "blueimp/jquery-file-upload": "^9.21"
+        "blueimp/jquery-file-upload": "^9.21",
+        "froala/wysiwyg-editor": "^2.8",
+        "ckeditor/ckeditor": "^4.9"
     }
 }

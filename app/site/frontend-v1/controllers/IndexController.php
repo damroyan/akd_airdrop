@@ -13,6 +13,17 @@ class IndexController extends Controller {
 
         $this->view->setVar('active_tab','index');
 
+        $offers = \Model\Offer::find([
+            'conditions'    => 'offer_status = :offer_status: AND offer_delete=:offer_delete:',
+            'bind'          => [
+                'offer_delete' => \Model\Offer::DELETE_FALSE,
+                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+            ]
+        ]);
+
+        $this->view->setVar('offers', $offers);
+
+
         /*$this->view->setVar('user_messages',[
             [
             'message_type'=>'warning',

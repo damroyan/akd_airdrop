@@ -19,3 +19,8 @@ ALTER TABLE `offer` ADD `offer_views` INT  NULL  DEFAULT NULL  AFTER `offer_stat
 ALTER TABLE `offer` CHANGE `offer_type` `offer_type` TINYINT(4)  NULL  DEFAULT NULL  COMMENT '1-AirDrop, 2-Bounty, 3-ICO';
 ALTER TABLE `offer` ADD `offer_delete` TINYINT  NULL  DEFAULT NULL  AFTER `offer_views`;
 ALTER TABLE `offer` CHANGE `offer_delete` `offer_delete` TINYINT(4)  NULL  DEFAULT '0';
+
+
+
+ALTER TABLE `offer` ADD `offer_code` FLOAT  NULL  DEFAULT NULL  AFTER `offer_delete`;
+ALTER TABLE `offer` CHANGE `offer_code` `offer_code` VARCHAR(4)  NULL  DEFAULT NULL;

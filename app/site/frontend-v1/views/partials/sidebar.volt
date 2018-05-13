@@ -58,11 +58,11 @@
 
                         <ul class="nav nav-second-level">
                             <li class=" {% if preg_match('@^user_user@ui', active_tab) %} active {% endif %} ">
-                                <a href="{{ url({'for': 'backend-v1-offer-list'}) }}">
+                                <a href="{{ url({'for': 'frontend-v1-offer-list'}) }}">
                                     {{ t.gettext('Список') }}</a></li>
 
                             <li class=" {% if preg_match('@^user_accesslog@ui', active_tab) %} active {% endif %} ">
-                                <a href="{{ url({'for': 'backend-v1-offer-edit'}) }}">
+                                <a href="{{ url({'for': 'frontend-v1-offer-edit'}) }}">
                                     {{ t.gettext('Создать новый') }}</a></li>
                         </ul>
                     </li>

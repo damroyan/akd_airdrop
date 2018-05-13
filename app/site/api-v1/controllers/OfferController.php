@@ -28,6 +28,16 @@ class OfferController extends Controller {
                 if( ((int)$params['offer_rating'] > 5)  OR ((int)$params['offer_rating'] < 1)) {
                     \Response::FieldsAdd('offer_rating', 'Рейтинг это число от 1 до 5');
                 }
+
+                if(!preg_match('%^[A-Za-z0-9]+$%', $params['offer_code'])) {
+                    \Response::FieldsAdd('offer_code', 'Код валюты может содержать только буквы и цифры
+                     от 2х до 4х символов');
+                }
+
+                if((strlen($params['offer_code']) > 4) OR (strlen($params['offer_code']) < 2)) {
+                    \Response::FieldsAdd('offer_code', 'Код валюты может содержать только буквы и цифры
+                     от 2х до 4х символов');
+                }
             }
         );
         if(is_http_response($result)) { return $result; }
@@ -66,7 +76,6 @@ class OfferController extends Controller {
         $offer->assign([
             'offer_name'                => params_has_or_null($params['offer_name']),
             'offer_type'                => params_has_or_null($params['offer_type']),
-            'offer_description'         => params_has_or_null($params['offer_description']),
             'offer_profit'              => params_has_or_null($params['offer_profit']),
             'offer_url'                 => params_has_or_null($params['offer_url']),
             'offer_site_url'            => $params['offer_site_url'],
@@ -76,6 +85,7 @@ class OfferController extends Controller {
             'offer_views'               => params_has_or_null($params['offer_views']),
             'offer_priority'            => params_has_or_null($params['offer_priority']),
             'offer_featured'            => $params['offer_featured'],
+            'offer_code'                => $offer->offer_code,
         ]);
 
         if(!$offer->save()) {
@@ -83,7 +93,12 @@ class OfferController extends Controller {
         }
 
         return \Response::Ok([
-            'offer_id'   => $offer->user_id,
+            'message'       => __('Оффер создан. Осталось добавить картинку и описание'),
+            'redirect'      => $this->url->get([
+                'for' => 'frontend-v1-offer-descedit'
+            ], [
+                'offer_id' => $offer->offer_id
+            ])
         ]);
     }
 
@@ -176,19 +191,110 @@ class OfferController extends Controller {
                     'offer_delete' => \Model\Offer::DELETE_FALSE,
                 ]);
 
-                if(!$offer->save()) {
-                    return \Response::Error(500, 'db_error_update');
-                }
-
                 break;
 
             default:
                 break;
         }
 
+        if(!$offer->save()) {
+            return \Response::Error(500, 'db_error_update');
+        }
+
         return \Response::Ok([
             'offer_id'       => $offer->offer_id,
         ]);
+    }
+
+    /**
+     * Редактирование пользователя админом
+     *
+     * @Role({"allow": ['admin']})
+     * @return \Phalcon\Http\Response
+     */
+    public function descUpdateAction() {
+        $params = $this->getParams();
+        if(is_http_response($params)) { return $params; }
+
+        if($params['offer_id']) {
+            $offer = \Model\Offer::findFirst([
+                "offer_id = :offer_id:",
+                'bind' => [
+                    'offer_id' => $params['offer_id'],
+                ]
+            ]);
+
+            if(!$offer) {
+                return \Response::Error(400, 'offer_id_incorrect');
+            }
+        } else {
+            return \Response::Error(400, 'offer_id_empty');
+        }
+
+
+        $offer->assign([
+            'offer_description'         => params_has_or_null($params['offer_description']),
+        ]);
+
+        if(!$offer->save()) {
+            return \Response::Error(500, 'db_error_insert');
+        }
+
+        return \Response::Ok([
+            'message'       => __('Описание обновлено.'),
+            'redirect'      => $this->url->get(['for'=>'frontend-v1-offer-list']),
+        ]);
+    }
+
+    /**
+     * Обновление картинки пользователя
+     *
+     * @Role({"allow": ['user','admin']})
+     * @return \Phalcon\Http\Response
+     */
+    public function pictureAction() {
+
+        $params = $this->getParams();
+        if(is_http_response($params)) { return $params; }
+
+        if(!isset($params['user_picture'])) {
+            return \Response::Error(
+                400,
+                __('New User Photo was not saved because of technical reasons (we not receive image). Please contact support.'));
+        }
+
+        // проверка, что файл локальный
+        // сделать епта :)
+
+        $uploadSingle = $this->uploadSingleImage(
+            $this->user,
+            $params,
+            'user_picture',
+            $this->config->image->directory_upload
+        );
+
+        $offer = \Model\Offer::findFirst([
+            'conditions'    => 'offer_id = :offer_id:',
+            'bind'          => [
+                'offer_id'       => $params['offer_id'],
+            ]
+        ]);
+        if (!$offer) {
+            return \Response::Error(404,
+                __('Offer was not found. Please contact support to fix this problem.'));
+        }
+
+        $offer->assign([
+            'offer_picture'  => $params['user_picture'],
+        ]);
+        $offer->save();
+
+        $image =  \Helper\Image::getInstance();
+
+        return \Response::Ok([
+            'user_picture'  => $image->image($this->user->user_picture,50, 50, 'mwh', 'png', true)->__toString(),
+        ]);
+
     }
 
 }

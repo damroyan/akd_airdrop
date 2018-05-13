@@ -28,6 +28,8 @@
                 'json':                     'lib/requirejs-plugins/json',
 
                 'jed':                      'lib/jed',
+                'ckeditor':                 '/front/ckeditor/ckeditor',
+
 
                 'jquery':                   'lib/jquery',
                 'jqueryUi':                 'lib/jquery-ui/jquery-ui',

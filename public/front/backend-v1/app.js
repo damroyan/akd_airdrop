@@ -1,8 +1,9 @@
 define([
     'jquery',
     'jed',
-    'bootstrap'
-], function($) {
+    'bootstrap',
+    'ckeditor'
+], function($, jed, b, ckeditor) {
 
     console.log('[app]', 'Init');
 

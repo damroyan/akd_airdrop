@@ -49,6 +49,10 @@ trait TraitApiV1Route {
             ['offer', 'edit'],
             ['offer', 'toggleban'],
             ['offer', 'toggledelete'],
+            ['offer', 'descUpdate'],
+            ['offer', 'picture'],
+
+
 
             // NEW PROJECT NAME - ROUTES
         ];

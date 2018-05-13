@@ -163,7 +163,11 @@ class UploadController extends Controller {
             }
 
             $random = md5($file->getName() . microtime(true) . rand(1000, 9999));
-            $filename = "{$this->config->image->directory_tmp}/{$random}.{$ext}";
+            $filename = "{$this->config->image->directory_tmp}{$random}.{$ext}";
+
+            if (!is_dir(DOCUMENT_ROOT . '/i')) {
+                mkdir(DOCUMENT_ROOT . "/i");
+            }
 
             if(!$file->moveTo(DOCUMENT_ROOT . "{$filename}")) {
                 return \Response::Error('500', __('File system error! Please contact with support'));
@@ -172,11 +176,14 @@ class UploadController extends Controller {
             return \Response::Ok([
                 'file'      => $filename,
                 'preview'   => array(
-                    '1x1'       => \Helper\Image::getInstance()->image($filename, 256, 256, '1x1')->path(),
+                    '140x140'   => \Helper\Image::getInstance()->image($filename, 140, 140, '1x1', 'png')->path(),
+                    '140x140_hires'   => \Helper\Image::getInstance()->image($filename, 140, 140, '1x1', 'png', true)->path(),
+                    '0x600'     => \Helper\Image::getInstance()->image($filename, 0, 600, 'mwh')->path(),
+                    '0x120'     => \Helper\Image::getInstance()->image($filename, 0, 120, 'mwh')->path(),
                 ),
             ]);
         }
 
-        return \Response::Error('500', 'error_upload');
+        return \Response::Error('500', __('backend.user.temp.error_upload'));
     }
 }
