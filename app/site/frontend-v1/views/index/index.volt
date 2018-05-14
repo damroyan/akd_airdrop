@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col-md-9">
-                {% if 1 %}
+                {% if offers|length == 0 %}
                 <div class="hpanel">
                     <div class="panel-body">
 

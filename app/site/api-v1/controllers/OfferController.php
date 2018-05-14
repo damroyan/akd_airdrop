@@ -72,7 +72,6 @@ class OfferController extends Controller {
         }
 
 
-
         $offer->assign([
             'offer_name'                => params_has_or_null($params['offer_name']),
             'offer_type'                => params_has_or_null($params['offer_type']),
@@ -85,7 +84,7 @@ class OfferController extends Controller {
             'offer_views'               => params_has_or_null($params['offer_views']),
             'offer_priority'            => params_has_or_null($params['offer_priority']),
             'offer_featured'            => $params['offer_featured'],
-            'offer_code'                => $offer->offer_code,
+            'offer_code'                => $params['offer_code'],
         ]);
 
         if(!$offer->save()) {
