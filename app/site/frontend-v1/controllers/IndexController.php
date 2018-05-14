@@ -18,10 +18,43 @@ class IndexController extends Controller {
             'bind'          => [
                 'offer_delete' => \Model\Offer::DELETE_FALSE,
                 'offer_status' => \Model\Offer::STATUS_ACTIVE,
-            ]
+            ],
+            'order'         => 'offer_priority DESC, offer_id DESC'
         ]);
 
+        $fresh_offers = \Model\Offer::find([
+            'conditions'    => 'offer_status = :offer_status: AND offer_delete=:offer_delete:',
+            'bind'          => [
+                'offer_delete' => \Model\Offer::DELETE_FALSE,
+                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+            ],
+            'order'         => 'offer_id DESC',
+            'limit'         => 7
+        ]);
+
+        $fresh_offers_array = [];
+        foreach ($fresh_offers as $fresh_offer) {
+            $fresh_offers_array[] = $fresh_offer->offer_id;
+        }
+
+        $hot_offers = \Model\Offer::find([
+            'conditions'    => 'offer_status = :offer_status: AND offer_delete=:offer_delete: AND offer_priority=:offer_priority:',
+            'bind'          => [
+                'offer_delete' => \Model\Offer::DELETE_FALSE,
+                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+                'offer_priority' => \Model\Offer::STATUS_ACTIVE,
+            ],
+        ]);
+
+        $hot_offers_array = [];
+        foreach ($hot_offers as $hot_offer) {
+            $hot_offers_array[] = $hot_offer->offer_id;
+        }
+
         $this->view->setVar('offers', $offers);
+        $this->view->setVar('fresh_offers', $fresh_offers_array);
+        $this->view->setVar('hot_offers', $hot_offers_array);
+
 
 
         /*$this->view->setVar('user_messages',[

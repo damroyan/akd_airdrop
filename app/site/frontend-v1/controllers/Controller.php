@@ -9,7 +9,7 @@ namespace Site\FrontendV1\Controllers;
  */
 class Controller extends \Controller {
 
-    const LIMIT_LIST = 50;
+    const LIMIT_LIST = 20;
 
     public function initialize() {
         /*
@@ -42,6 +42,31 @@ class Controller extends \Controller {
         /*
          * CORE get GLOBAL messages -- END
          */
+
+
+        /**
+         * Global featured offers
+         */
+        $featured_offers = \Model\Offer::find([
+            'conditions'    => 'offer_featured = :offer_featured: AND offer_status=:offer_status: AND offer_delete = :offer_delete:',
+            'bind'          => [
+                'offer_featured'    => \Model\Offer::STATUS_ACTIVE,
+                'offer_status'      => \Model\Offer::STATUS_ACTIVE,
+                'offer_delete'      => \Model\Offer::DELETE_FALSE,
+            ],
+            'order'         => 'offer_id DESC'
+        ]);
+
+        $featured_offers = $featured_offers->toArray();
+
+        $i = 0;
+        while ($i < count($featured_offers)) {
+            $featured_offers[$i]['offer_days_left'] = round((strtotime($featured_offers[$i]['offer_end_date']) - time())/(60*60*24));
+            $i++;
+        }
+
+        $this->view->setVar('featured_offers',$featured_offers);
+
 
     }
     final protected function paginateSeoUrl($route, $currentPage = null, $lastPage = null, $title = null) {

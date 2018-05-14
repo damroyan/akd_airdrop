@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-10 17:57+0300\n"
-"PO-Revision-Date: 2018-05-10 18:10+0300\n"
+"POT-Creation-Date: 2018-05-14 18:23+0300\n"
+"PO-Revision-Date: 2018-05-14 18:23+0300\n"
 "Last-Translator: Dmitry Amroyan <da@mywishboard.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Basepath: ../../../../../..\n"
@@ -51,6 +51,29 @@ msgstr ""
 "Получен некорректный тип сообщения. Пожалуйста свяжитесь со службой "
 "поддержки по e-mail"
 
+#: app/site/api-v1/controllers/OfferController.php:95
+msgid "Оффер создан. Осталось добавить картинку и описание"
+msgstr ""
+
+#: app/site/api-v1/controllers/OfferController.php:243
+msgid "Описание обновлено."
+msgstr ""
+
+#: app/site/api-v1/controllers/OfferController.php:262
+#: app/site/api-v1/controllers/UserController.php:729
+msgid ""
+"New User Photo was not saved because of technical reasons (we not receive "
+"image). Please contact support."
+msgstr ""
+"Новое изображение профиля не было сохранено по техническим причинам (мы не "
+"получили изображение). Пожалуйста свяжитесь со службой поддержки"
+
+#: app/site/api-v1/controllers/OfferController.php:283
+#, fuzzy
+#| msgid "Company was not found. Please contact support to fix this problem."
+msgid "Offer was not found. Please contact support to fix this problem."
+msgstr "Компания не была найдена, Свяжитесь с поддержкой. "
+
 #: app/site/api-v1/controllers/TokenController.php:157
 msgid "Registration was successfully completed. Your account was activated."
 msgstr "Регистрация завершена. Ваш аккаунт был активирован."
@@ -67,9 +90,13 @@ msgstr "Загрузка сразу нескольких файлов не по�
 msgid "Undefined file type"
 msgstr "Неопределенный тип файла"
 
-#: app/site/api-v1/controllers/UploadController.php:169
+#: app/site/api-v1/controllers/UploadController.php:173
 msgid "File system error! Please contact with support"
 msgstr "Ошибка файловой системы. Пожалуйста свяжитесь со службой поддержки"
+
+#: app/site/api-v1/controllers/UploadController.php:187
+msgid "backend.user.temp.error_upload"
+msgstr ""
 
 #: app/site/api-v1/controllers/UserController.php:30
 msgid "User was delete successfully. Hope you will come to us in the future."
@@ -154,14 +181,6 @@ msgstr ""
 "Пользователь не активировал аккаунт по ссылке из e-mail. Пожалуйста "
 "активируйте аккаунт или свяжитесь со службой поддержки"
 
-#: app/site/api-v1/controllers/UserController.php:729
-msgid ""
-"New User Photo was not saved because of technical reasons (we not receive "
-"image). Please contact support."
-msgstr ""
-"Новое изображение профиля не было сохранено по техническим причинам (мы не "
-"получили изображение). Пожалуйста свяжитесь со службой поддержки"
-
 #: app/site/api-v1/validators/CompanyEdit.php:20
 msgid "Company name is Required!"
 msgstr "Название компаниии обязательно"
@@ -189,6 +208,34 @@ msgstr "Неправильно указан e-mail"
 #: app/site/api-v1/validators/Feedback.php:36
 msgid "Description are required"
 msgstr "Описание обязательно для заполнени"
+
+#: app/site/api-v1/validators/OfferEdit.php:15
+msgid "Имя это обязательное поле"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:21
+msgid "Тип выбран некорректно"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:25
+msgid "Ссылка на оффер это обязательное поле"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:30
+msgid "Ссылка на сайт оффера это обязательное поле"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:35
+msgid "Дата окончания оффера это обязательное поле"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:40
+msgid "Рейтинг это обязательное поле"
+msgstr ""
+
+#: app/site/api-v1/validators/OfferEdit.php:44
+msgid "Статус это обязательное поле"
+msgstr ""
 
 #: app/site/api-v1/validators/UserAuth.php:12
 msgid "User login is required"
@@ -334,6 +381,37 @@ msgstr "Доступ запрещен"
 msgid "Page was not found"
 msgstr "Страница не найдена"
 
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:26
+msgid "Photo or Logo"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:50
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:64
+msgid "Please click on image to download new one "
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:55
+msgid "Good image will looks better in account."
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:60
+msgid "Are you sure you want delete your image?"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:63
+msgid "Delete existing one"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_partials_navigation.volt.php:64
+#, fuzzy
+#| msgid "Back to Index"
+msgid "Back to Front"
+msgstr "Вернуться на главную"
+
+#: cache/view/_www_airdrop.local_app_site_backend-v1_views_partials_navigation.volt.php:79
+msgid "Exit"
+msgstr ""
+
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:25
 msgid "Page was not found!"
 msgstr "Страница не найдена"
@@ -351,69 +429,64 @@ msgstr ""
 msgid "Go to main page"
 msgstr "На главную"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:35
-msgid "Send feedback!"
-msgstr "Отправить сообщение"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:26
+#, fuzzy
+#| msgid "Permission Denied"
+msgid "Permission denied!"
+msgstr "Доступ запрещен"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:37
-msgid "We will be happy to help you in any reason"
-msgstr "Мы будем рады вам помочь"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:28
+msgid "You should be authorized or have another User Role in system"
+msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:51
-msgid "Your name"
-msgstr "Ваше имя"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:31
+#, fuzzy
+#| msgid "Login in"
+msgid "Login In"
+msgstr "Идет вход"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:63
-msgid "Request Type"
-msgstr "Тип вопроса"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:68
+msgid "hot"
+msgstr "Горячее"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:66
-msgid "Technical issues"
-msgstr "Технические вопросы"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:67
-msgid "Financial issues"
-msgstr "Финансовые вопросы"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:68
-msgid "Other"
-msgstr "Другое"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:73
-msgid "Message"
-msgstr "Сообщение"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:78
-msgid "Send"
-msgstr "Отправить"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:32
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:70
 msgid "new"
 msgstr "Свежак!"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:57
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:76
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:37
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:37
 msgid "Estimated value"
 msgstr "~ доход"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:61
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:80
 msgid "dedline"
 msgstr "Действует до"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:68
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:87
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:39
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:39
 msgid "Views"
 msgstr "Просмотров"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:73
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:92
 msgid "Get"
 msgstr "Получить!"
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:40
+msgid "Фото или лого"
+msgstr ""
+
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:74
+msgid "Описание оффера"
+msgstr ""
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:59
 msgid "Activate offer"
 msgstr "Получить монеты"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:66
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:53
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:12
 msgid ""
 "Please never share your private key with anyone as they will be able to "
@@ -449,11 +522,11 @@ msgstr ""
 msgid "Featured offers"
 msgstr "Популярные офферы"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:11
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:12
 msgid "Ends in"
 msgstr "Закроется через"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:11
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:12
 msgid "views"
 msgstr "показ(ов)"
 
@@ -462,12 +535,12 @@ msgid "More"
 msgstr "Подробнее"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:18
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:81
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:75
 msgid "Profile"
 msgstr "Профиль"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:20
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:84
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:78
 msgid "Logout"
 msgstr "Выход"
 
@@ -487,23 +560,19 @@ msgstr "Прошедшие офферы"
 msgid "FAQ"
 msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:48
-msgid "My Company"
-msgstr "Моя компания"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:52
+msgid "Офферы"
+msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:58
-msgid "Users"
-msgstr "Пользователи"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:62
+msgid "Список"
+msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:68
-msgid "List"
-msgstr "Список"
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:66
+msgid "Создать новый"
+msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:72
-msgid "Auth History"
-msgstr "Статистика входов"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:94
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:88
 msgid "Feedback"
 msgstr "Обратная связь"
 
@@ -557,8 +626,44 @@ msgstr "Войти"
 msgid "Register"
 msgstr "Регистрация"
 
-#~ msgid "Login in"
-#~ msgstr "Идет вход"
+#~ msgid "Send feedback!"
+#~ msgstr "Отправить сообщение"
+
+#~ msgid "We will be happy to help you in any reason"
+#~ msgstr "Мы будем рады вам помочь"
+
+#~ msgid "Your name"
+#~ msgstr "Ваше имя"
+
+#~ msgid "Request Type"
+#~ msgstr "Тип вопроса"
+
+#~ msgid "Technical issues"
+#~ msgstr "Технические вопросы"
+
+#~ msgid "Financial issues"
+#~ msgstr "Финансовые вопросы"
+
+#~ msgid "Other"
+#~ msgstr "Другое"
+
+#~ msgid "Message"
+#~ msgstr "Сообщение"
+
+#~ msgid "Send"
+#~ msgstr "Отправить"
+
+#~ msgid "My Company"
+#~ msgstr "Моя компания"
+
+#~ msgid "Users"
+#~ msgstr "Пользователи"
+
+#~ msgid "List"
+#~ msgstr "Список"
+
+#~ msgid "Auth History"
+#~ msgstr "Статистика входов"
 
 #~ msgid "Hello"
 #~ msgstr "Привет, %s %d"

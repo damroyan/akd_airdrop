@@ -21,7 +21,7 @@
                 <div class="col-md-6" style="padding-left: 0px !important;">
                     <div class="hpanel">
                         <div class="panel-body">
-                            <span class="label label-success pull-right">{{ t.gettext('new') }}</span>
+
                             <div class="row">
                                 <div class="col-sm-3 project-info">
                                     <div class="project-action m-t-md text-center">
@@ -41,8 +41,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {% if offer.offer_id in hot_offers %}
+                                    <span class="label label-danger pull-right">{{ t.gettext('hot') }}</span>
+                                    {% elseif offer.offer_id in fresh_offers %}
+                                    <span class="label label-success pull-right">{{ t.gettext('new') }}</span>
+                                    {% endif %}
                                     <h4><a href="{{ url({'for':'frontend-v1-offer-page','offer_id':offer.offer_id}) }}"> {{offer.offer_name}} {% if offer.offer_code %}({{ offer.offer_code }}){% endif %}</a></h4>
-
                                     <div class="row chld-mt5">
                                         <div class="col-sm-5">
                                             <div class="project-label font-uppercase">{{ t.gettext('Estimated value') }}</div>
