@@ -91,25 +91,17 @@
 
                 <td>
                 {% if item.offer_picture %}
-                    <a href="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': item.offer_id}) }}">
-                        <span class="glyphicon glyphicon-ok text-success"></span>
-                    </a>
+                    <span class="glyphicon glyphicon-ok text-success"></span>
                 {% else %}
-                    <a href="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': item.offer_id}) }}">
-                        <span class="glyphicon glyphicon-remove text-danger"></span>
-                    </a>
+                    <span class="glyphicon glyphicon-remove text-danger"></span>
                 {% endif %}
                 </td>
                 <td>
-                    {% if item.offer_description %}
-                    <a href="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': item.offer_id}) }}">
-                        <span class="glyphicon glyphicon-ok text-success"></span>
-                    </a>
-                    {% else %}
-                    <a href="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': item.offer_id}) }}">
-                        <span class="glyphicon glyphicon-remove text-danger"></span>
-                    </a>
-                    {% endif %}
+                {% if item.offer_description %}
+                    <span class="glyphicon glyphicon-ok text-success"></span>
+                {% else %}
+                    <span class="glyphicon glyphicon-remove text-danger"></span>
+                {% endif %}
                 </td>
 
                 <td>
@@ -156,13 +148,6 @@
                     <div class="btn-group pull-right" role="group">
 
                         <a href="{{ url({'for': 'frontend-v1-offer-edit'}, {'offer_id': item.offer_id}) }}"
-                           class="btn btn-primary2"
-                           data-toggle="tooltip"
-                           title="Редактировать настройки"
-                        >
-                            <span class="glyphicon glyphicon-cog"></span>
-                        </a>
-                        <a href="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': item.offer_id}) }}"
                            class="btn btn-primary"
                            data-toggle="tooltip"
                            title="Редактировать описание и фото"

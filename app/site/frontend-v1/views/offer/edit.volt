@@ -19,7 +19,7 @@
               method="post"
               class="form-horizontal js-form"
               data-url="{{ url({'for': 'api-v1-offer-edit'}) }}"
-              data-redirect-url="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': o.offer_id}) }}"
+              data-redirect-url="{{ url({'for': 'frontend-v1-offer-list'}, {'offer_id': o.offer_id}) }}"
 
         >
 
