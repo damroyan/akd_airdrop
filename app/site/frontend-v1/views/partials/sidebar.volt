@@ -38,7 +38,7 @@
             </li>
 
             <li {% if active_tab == 'faq' %} class="active" {% endif %}>
-                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('FAQ') }}</span></a>
+                <a href="{{ url({'for':'frontend-v1-index-faq'}) }}"> <span class="nav-label">{{ t.gettext('FAQ') }}</span></a>
             </li>
 
             {% if user.user_id %}

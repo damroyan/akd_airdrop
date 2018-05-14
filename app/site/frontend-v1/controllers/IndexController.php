@@ -120,4 +120,12 @@ class IndexController extends Controller {
         $this->view->setVar('q',        $q);
         $this->view->setVar('results',  $results);
     }
+
+    /**
+     * @Role({"allow": ['public']})
+     */
+    public function faqAction() {
+
+        $this->view->setVar('sidebar_active','faq');
+    }
 }

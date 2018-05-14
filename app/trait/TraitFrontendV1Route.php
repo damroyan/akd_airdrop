@@ -22,6 +22,8 @@ trait TraitFrontendV1Route {
 
             ['index', 'setLanguage', '/set/language/', ],
             ['index', 'search', '/search/', ],
+            ['index', 'faq',  '/faq/'],
+
 
             ['user', 'auth', ],
             ['user', 'registration', ],

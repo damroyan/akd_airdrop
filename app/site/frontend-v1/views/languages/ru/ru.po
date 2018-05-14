@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-14 20:27+0300\n"
-"PO-Revision-Date: 2018-05-14 20:28+0300\n"
+"POT-Creation-Date: 2018-05-14 20:44+0300\n"
+"PO-Revision-Date: 2018-05-14 20:49+0300\n"
 "Last-Translator: Dmitry Amroyan <da@mywishboard.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -374,17 +374,18 @@ msgstr "Страница не найдена"
 #: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:37
 #: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:37
 #: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:37
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:75
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:74
 #: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:37
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:37
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:37
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:37
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:37
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:37
 #: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:37
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:37
 #: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:37
 #: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:37
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:72
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:74
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:37
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:37
 msgid "Estimated value"
@@ -394,17 +395,18 @@ msgstr "~ доход"
 #: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:39
 #: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:39
 #: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:39
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:86
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:85
 #: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:39
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:39
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:39
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:39
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:39
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:39
 #: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:39
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:39
 #: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:39
 #: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:39
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:83
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:85
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:39
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:39
 msgid "Views"
@@ -418,6 +420,7 @@ msgstr "Просмотров"
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:51
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:51
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:51
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:51
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:51
 #: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:59
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:51
@@ -436,6 +439,7 @@ msgstr "Получить монеты"
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:52
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:52
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:52
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:52
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:52
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:52
 #: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:52
@@ -454,6 +458,7 @@ msgstr "Подробнее"
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:52
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:52
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:52
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:52
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:52
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:52
 #: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:52
@@ -470,6 +475,7 @@ msgstr ""
 #: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:61
 #: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:61
 #: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:61
+#: cache/compiler/94eeed8c7a662a20c15174870fc0cb02.php:61
 #: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:61
 #: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:66
 #: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:61
@@ -583,32 +589,33 @@ msgstr ""
 msgid "Delete existing one"
 msgstr ""
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:33
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:32
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:32
 msgid "There is no closed offers right now"
 msgstr "На данный момент нет оконченных офферов"
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:35
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:32
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:34
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:34
 msgid "There is no active offers right now"
 msgstr "На данный момент нет активных офферов"
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:68
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:65
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:67
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:67
 msgid "hot"
 msgstr "Горячее"
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:70
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:67
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:69
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:69
 msgid "new"
 msgstr "Свежак!"
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:79
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:76
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:78
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:78
 msgid "dedline"
 msgstr "Действует до"
 
-#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:91
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:88
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:90
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:90
 msgid "Get"
 msgstr "Получить!"
 
@@ -670,6 +677,20 @@ msgstr ""
 msgid "Offer description"
 msgstr "Описание оффера"
 
+#: cache/compiler/832a6ac1da12b6f59a117a731dd03c9c.php:33
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_faq.volt.php:33
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:41
+msgid "FAQ"
+msgstr ""
+
+#: cache/compiler/832a6ac1da12b6f59a117a731dd03c9c.php:35
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_faq.volt.php:35
+#, php-format
+msgid "If you not find answer here please use <a href=\"%s\">feedback form</a>"
+msgstr ""
+"Если вы не нашли ответ на Ваш вопрос, используйте форму <a href=\"%s"
+"\">обратной связи</a>"
+
 #: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
 msgid "Confirm this please"
 msgstr ""
@@ -728,38 +749,47 @@ msgid "You should be authorized to use this page"
 msgstr ""
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:35
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:35
 msgid "Send feedback!"
 msgstr "Отправить сообщение"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:37
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:37
 msgid "We will be happy to help you in any reason"
 msgstr "Мы будем рады вам помочь"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:51
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:51
 msgid "Your name"
 msgstr "Ваше имя"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:63
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:63
 msgid "Request Type"
 msgstr "Тип вопроса"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:66
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:66
 msgid "Technical issues"
 msgstr "Технические вопросы"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:67
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:67
 msgid "Financial issues"
 msgstr "Финансовые вопросы"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:68
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:68
 msgid "Other"
 msgstr "Другое"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:73
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:73
 msgid "Message"
 msgstr "Сообщение"
 
 #: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:78
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_feedback_form.volt.php:78
 msgid "Send"
 msgstr "Отправить"
 
@@ -967,10 +997,6 @@ msgstr "Активные офферы"
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:37
 msgid "Closed Offers"
 msgstr "Прошедшие офферы"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:41
-msgid "FAQ"
-msgstr ""
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_sidebar.volt.php:52
 msgid "Офферы"
