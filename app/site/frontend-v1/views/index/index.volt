@@ -46,7 +46,7 @@
                                     {% elseif offer.offer_id in fresh_offers %}
                                     <span class="label label-success pull-right">{{ t.gettext('new') }}</span>
                                     {% endif %}
-                                    <h4><a href="{{ url({'for':'frontend-v1-offer-page','offer_id':offer.offer_id}) }}"> {{offer.offer_name}} </a></h4>
+                                    <h4><a href="{{ url({'for':'frontend-v1-offer-page','offer_id':offer.offer_id}) }}"> {{offer.offer_name}} {% if offer.offer_code %}({{ offer.offer_code }}){% endif %}</a></h4>
                                     <div class="row chld-mt5">
                                         <div class="col-sm-5">
                                             <div class="project-label font-uppercase">{{ t.gettext('Estimated value') }}</div>

@@ -57,6 +57,8 @@
     <link rel="stylesheet" href="/front/animate.css/animate.css" />
     <link rel="stylesheet" href="/front/bootstrap/css/bootstrap.css" />
 
+    <link rel="stylesheet" href="/js/lib/jquery-ui/themes/base/all.css" />
+
     <!-- App styles -->
     <link rel="stylesheet" href="/front/frontend-v1/styles/theme.css">
     <link rel="stylesheet"  href="/assets/frontend.css?{{ global_var['version'] }}"  type="text/css" />
