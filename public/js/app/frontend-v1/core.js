@@ -396,7 +396,10 @@ define([
                 .attr({'disabled': 'disabled'})
                 .addClass('disabled');
 
-            for ( instance in CKEDITOR.instances ) CKEDITOR.instances[instance].updateElement();
+            if (typeof CKEDITOR !== 'undefined') {
+                for ( instance in CKEDITOR.instances ) CKEDITOR.instances[instance].updateElement();
+            }
+
 
             var $busy = fnBusy();
             fnRequest.call(
