@@ -27,6 +27,14 @@
                         </div>
                     </div>
 
+                    <div class="row mt10">
+                        <div class="col-sm-12">
+                            <a href="{{ offer.offer_url }}" class="btn btn-success text-capitalize" style="font-size: 28px;" target="_blank"><i class="fa fa-check-circle"></i> {{ t.gettext('Activate offer') }}</a> <br/>
+                            <span class="text-uppercase">{{ t.gettext('or') }}</span> <a href="{{ offer.offer_site_url }}" target="_blank">{{ t.gettext('Visit site') }}</a>
+                        </div>
+                    </div>
+                    <hr />
+
                     <hr />
                     <div class="row">
                         <div class="col-sm-12 text-center">
