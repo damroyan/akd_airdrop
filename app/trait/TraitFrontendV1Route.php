@@ -56,14 +56,7 @@ trait TraitFrontendV1Route {
             ['offer', 'list', '/offers/'],
             ['offer', 'edit', '/offer/edit/'],
 
-
-            ['offer', 'descedit', '/offer/descripiton/edit/'],
-
-
-
             //['company', 'my', '/company/my/']
-
-
         ];
 
         foreach($array as $value) {

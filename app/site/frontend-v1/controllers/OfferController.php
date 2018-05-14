@@ -177,6 +177,7 @@ class OfferController extends Controller
             'offer_priority'        => params_has_or_null($offer->offer_priority),
             'offer_views'           => $offer->offer_views,
             'offer_code'            => $offer->offer_code,
+            'offer_picture'         => $offer->offer_picture,
 
         ]);
     }

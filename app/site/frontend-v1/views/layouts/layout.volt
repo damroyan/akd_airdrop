@@ -18,7 +18,7 @@
 
         {# основной контент #}
         <div id="wrapper">
-            <div class="content animate-panel">
+            <div class="content">
                 {% block content %}{% endblock %}
 
                 {# выдвигающаяся панель справа #}

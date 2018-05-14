@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="hpanel">
+<div class="hpanel js-offer_edit">
     <h2>
         Оффер /
     {% if o.offer_id %}
@@ -20,6 +20,7 @@
               class="form-horizontal js-form"
               data-url="{{ url({'for': 'api-v1-offer-edit'}) }}"
               data-redirect-url="{{ url({'for': 'frontend-v1-offer-descedit'}, {'offer_id': o.offer_id}) }}"
+
         >
 
             <div class="form-group">
@@ -44,6 +45,40 @@
                         'class': 'form-control',
                         'placeholder': 'BTC'
                     ) }}
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> {{ t.gettext('Image') }}</label>
+
+                <div class="col-sm-10">
+                    <div class="panel-body">
+                        <div class="vertical-align">
+
+                            <div class="text-center admin-upload-image-block js-image-upload"
+                                 style="width: 190px !important;"
+                                 data-image-blank="/front/nologo.png"
+                                 data-callback="offer_picture"
+                                 data-field-selector="input[name='offer_picture']">
+                                <img src="{% if o.offer_picture %}{{ image_path(o.offer_picture, 140, 140, '1x1', 'png', true) }}{% else %}/front/nologo.png{% endif %}"
+                                     class="img-circle m-b"
+                                     data-element="offer_picture"
+                                     style="display: block; width: 140px !important; height: 140px !important;"
+                                     alt="" />
+
+                                <div class="fileinput-button"
+                                     data-fileupload-ration="140x140_hires">
+                                    <input type="file" name="file" class="fileinput" />
+                                </div>
+
+                                {{ hidden_field("offer_picture") }}
+                            </div>
+                            <div>
+                                {{ t.gettext('Please click on image to download new one ') | escape}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -153,6 +188,18 @@
                         'class': 'form-control',
                         'id': 'label-for-user_cdate',
                         'placeholder' : 'Дефолтное значение'
+                    ) }}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="label-for-user_status" class="col-sm-2 control-label">
+                    {{ t.gettext('Описание оффера') }}
+                </label>
+                <div class="col-sm-10">
+                    {{ text_area(
+                        "offer_description",
+                        'class': 'form-control'
                     ) }}
                 </div>
             </div>

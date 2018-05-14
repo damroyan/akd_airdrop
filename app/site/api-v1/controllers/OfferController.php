@@ -85,6 +85,8 @@ class OfferController extends Controller {
             'offer_priority'            => params_has_or_null($params['offer_priority']),
             'offer_featured'            => $params['offer_featured'],
             'offer_code'                => $params['offer_code'],
+            'offer_description'         => $params['offer_description'],
+            'offer_picture'             => $params['offer_picture'],
         ]);
 
         if(!$offer->save()) {
@@ -92,11 +94,9 @@ class OfferController extends Controller {
         }
 
         return \Response::Ok([
-            'message'       => __('Оффер создан. Осталось добавить картинку и описание'),
+            'message'       => __('Оффер создан.'),
             'redirect'      => $this->url->get([
-                'for' => 'frontend-v1-offer-descedit'
-            ], [
-                'offer_id' => $offer->offer_id
+                'for' => 'frontend-v1-offer-list'
             ])
         ]);
     }
@@ -205,95 +205,6 @@ class OfferController extends Controller {
         ]);
     }
 
-    /**
-     * Редактирование пользователя админом
-     *
-     * @Role({"allow": ['admin']})
-     * @return \Phalcon\Http\Response
-     */
-    public function descUpdateAction() {
-        $params = $this->getParams();
-        if(is_http_response($params)) { return $params; }
 
-        if($params['offer_id']) {
-            $offer = \Model\Offer::findFirst([
-                "offer_id = :offer_id:",
-                'bind' => [
-                    'offer_id' => $params['offer_id'],
-                ]
-            ]);
-
-            if(!$offer) {
-                return \Response::Error(400, 'offer_id_incorrect');
-            }
-        } else {
-            return \Response::Error(400, 'offer_id_empty');
-        }
-
-
-        $offer->assign([
-            'offer_description'         => params_has_or_null($params['offer_description']),
-        ]);
-
-        if(!$offer->save()) {
-            return \Response::Error(500, 'db_error_insert');
-        }
-
-        return \Response::Ok([
-            'message'       => __('Описание обновлено.'),
-            'redirect'      => $this->url->get(['for'=>'frontend-v1-offer-list']),
-        ]);
-    }
-
-    /**
-     * Обновление картинки пользователя
-     *
-     * @Role({"allow": ['user','admin']})
-     * @return \Phalcon\Http\Response
-     */
-    public function pictureAction() {
-
-        $params = $this->getParams();
-        if(is_http_response($params)) { return $params; }
-
-        if(!isset($params['user_picture'])) {
-            return \Response::Error(
-                400,
-                __('New User Photo was not saved because of technical reasons (we not receive image). Please contact support.'));
-        }
-
-        // проверка, что файл локальный
-        // сделать епта :)
-
-        $uploadSingle = $this->uploadSingleImage(
-            $this->user,
-            $params,
-            'user_picture',
-            $this->config->image->directory_upload
-        );
-
-        $offer = \Model\Offer::findFirst([
-            'conditions'    => 'offer_id = :offer_id:',
-            'bind'          => [
-                'offer_id'       => $params['offer_id'],
-            ]
-        ]);
-        if (!$offer) {
-            return \Response::Error(404,
-                __('Offer was not found. Please contact support to fix this problem.'));
-        }
-
-        $offer->assign([
-            'offer_picture'  => $params['user_picture'],
-        ]);
-        $offer->save();
-
-        $image =  \Helper\Image::getInstance();
-
-        return \Response::Ok([
-            'user_picture'  => $image->image($this->user->user_picture,50, 50, 'mwh', 'png', true)->__toString(),
-        ]);
-
-    }
 
 }

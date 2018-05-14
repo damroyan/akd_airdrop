@@ -396,6 +396,8 @@ define([
                 .attr({'disabled': 'disabled'})
                 .addClass('disabled');
 
+            for ( instance in CKEDITOR.instances ) CKEDITOR.instances[instance].updateElement();
+
             var $busy = fnBusy();
             fnRequest.call(
                 $form[0],

@@ -31,8 +31,8 @@ define(['jquery',
      */
 
 
-    $('#editor:eq(0)').each(function() {
-        require(['app/descedit']);
+    $('.js-offer_edit:eq(0)').each(function() {
+        require(['app/offer-edit']);
     });
 
 
