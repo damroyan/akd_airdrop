@@ -94,7 +94,7 @@ class OfferController extends Controller {
         }
 
         return \Response::Ok([
-            'message'       => __('Оффер создан.'),
+            'message'       => __('Offer created.'),
             'redirect'      => $this->url->get([
                 'for' => 'frontend-v1-offer-list'
             ])

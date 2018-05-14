@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-14 18:23+0300\n"
-"PO-Revision-Date: 2018-05-14 18:23+0300\n"
+"POT-Creation-Date: 2018-05-14 20:27+0300\n"
+"PO-Revision-Date: 2018-05-14 20:28+0300\n"
 "Last-Translator: Dmitry Amroyan <da@mywishboard.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Basepath: ../../../../../..\n"
-"X-Poedit-KeywordsList: _;gettext;__;#_;T.gettext\n"
+"X-Poedit-KeywordsList: _;gettext;__;#_;T.gettext;t.gettext\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: app/site/frontend-v1/views\n"
 "X-Poedit-SearchPath-1: app/site/frontend-v1/controllers\n"
@@ -51,28 +51,9 @@ msgstr ""
 "Получен некорректный тип сообщения. Пожалуйста свяжитесь со службой "
 "поддержки по e-mail"
 
-#: app/site/api-v1/controllers/OfferController.php:95
-msgid "Оффер создан. Осталось добавить картинку и описание"
-msgstr ""
-
-#: app/site/api-v1/controllers/OfferController.php:243
-msgid "Описание обновлено."
-msgstr ""
-
-#: app/site/api-v1/controllers/OfferController.php:262
-#: app/site/api-v1/controllers/UserController.php:729
-msgid ""
-"New User Photo was not saved because of technical reasons (we not receive "
-"image). Please contact support."
-msgstr ""
-"Новое изображение профиля не было сохранено по техническим причинам (мы не "
-"получили изображение). Пожалуйста свяжитесь со службой поддержки"
-
-#: app/site/api-v1/controllers/OfferController.php:283
-#, fuzzy
-#| msgid "Company was not found. Please contact support to fix this problem."
-msgid "Offer was not found. Please contact support to fix this problem."
-msgstr "Компания не была найдена, Свяжитесь с поддержкой. "
+#: app/site/api-v1/controllers/OfferController.php:97
+msgid "Offer created."
+msgstr "Оффер создан"
 
 #: app/site/api-v1/controllers/TokenController.php:157
 msgid "Registration was successfully completed. Your account was activated."
@@ -181,6 +162,14 @@ msgstr ""
 "Пользователь не активировал аккаунт по ссылке из e-mail. Пожалуйста "
 "активируйте аккаунт или свяжитесь со службой поддержки"
 
+#: app/site/api-v1/controllers/UserController.php:729
+msgid ""
+"New User Photo was not saved because of technical reasons (we not receive "
+"image). Please contact support."
+msgstr ""
+"Новое изображение профиля не было сохранено по техническим причинам (мы не "
+"получили изображение). Пожалуйста свяжитесь со службой поддержки"
+
 #: app/site/api-v1/validators/CompanyEdit.php:20
 msgid "Company name is Required!"
 msgstr "Название компаниии обязательно"
@@ -210,32 +199,32 @@ msgid "Description are required"
 msgstr "Описание обязательно для заполнени"
 
 #: app/site/api-v1/validators/OfferEdit.php:15
-msgid "Имя это обязательное поле"
-msgstr ""
+msgid "Name is a required field"
+msgstr "Имя это обязательное поле"
 
 #: app/site/api-v1/validators/OfferEdit.php:21
-msgid "Тип выбран некорректно"
-msgstr ""
+msgid "Incorrect type"
+msgstr "Тип выбран некорректно"
 
 #: app/site/api-v1/validators/OfferEdit.php:25
-msgid "Ссылка на оффер это обязательное поле"
-msgstr ""
+msgid "Offer URL is required"
+msgstr "Ссылка на оффер это обязательное поле"
 
 #: app/site/api-v1/validators/OfferEdit.php:30
-msgid "Ссылка на сайт оффера это обязательное поле"
-msgstr ""
+msgid "Offer website URL is required"
+msgstr "Ссылка на сайт оффера это обязательное поле"
 
 #: app/site/api-v1/validators/OfferEdit.php:35
-msgid "Дата окончания оффера это обязательное поле"
-msgstr ""
+msgid "End date is required field"
+msgstr "Дата окончания оффера это обязательное поле"
 
 #: app/site/api-v1/validators/OfferEdit.php:40
-msgid "Рейтинг это обязательное поле"
-msgstr ""
+msgid "Rating is a required field"
+msgstr "Рейтинг это обязательное поле"
 
 #: app/site/api-v1/validators/OfferEdit.php:44
-msgid "Статус это обязательное поле"
-msgstr ""
+msgid "Status is a required field"
+msgstr "Статус это обязательное поле"
 
 #: app/site/api-v1/validators/UserAuth.php:12
 msgid "User login is required"
@@ -381,26 +370,523 @@ msgstr "Доступ запрещен"
 msgid "Page was not found"
 msgstr "Страница не найдена"
 
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:37
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:37
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:37
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:37
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:75
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:37
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:37
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:37
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:37
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:37
+#: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:37
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:37
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:37
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:37
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:72
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:37
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:37
+msgid "Estimated value"
+msgstr "~ доход"
+
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:39
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:39
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:39
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:39
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:86
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:39
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:39
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:39
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:39
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:39
+#: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:39
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:39
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:39
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:39
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:83
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:39
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:39
+msgid "Views"
+msgstr "Просмотров"
+
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:51
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:51
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:51
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:51
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:51
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:51
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:51
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:51
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:51
+#: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:59
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:51
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:51
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:51
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:59
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:51
+msgid "Activate offer"
+msgstr "Получить монеты"
+
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:52
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:52
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:52
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:52
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:52
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:52
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:52
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:52
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:52
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:52
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:52
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:52
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:52
+#, fuzzy
+#| msgid "More"
+msgid "or"
+msgstr "Подробнее"
+
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:52
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:52
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:52
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:52
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:52
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:52
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:52
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:52
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:52
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:52
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:52
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:52
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:52
+msgid "Visit site"
+msgstr ""
+
+#: cache/compiler/053972bbbe36ba7dc2ae58081926f51c.php:61
+#: cache/compiler/26e1c3ca406727764d7dc7318296d015.php:61
+#: cache/compiler/2f3d0fe27fdc57dd534385253700155e.php:61
+#: cache/compiler/3c9f77c26dd2186bc17c14d1cb8bc146.php:61
+#: cache/compiler/443b6fc3ca9c70a2988c8d4c21eec56d.php:61
+#: cache/compiler/4dd5e55ddf4c56059173aef93df79668.php:61
+#: cache/compiler/7026aae7a66e8b6a9d49acc6204b2e1a.php:61
+#: cache/compiler/71f11b25bbe32d24f5ee3def5c413f91.php:61
+#: cache/compiler/d734244733b28ac632ac26d3d5770c28.php:61
+#: cache/compiler/dade76de85b1efbefbc8857058f2dc15.php:66
+#: cache/compiler/e6a45d093006704659abaaba3d45e21f.php:61
+#: cache/compiler/f2c6f7f9b55fbd28d213e077d28c6e73.php:61
+#: cache/compiler/f4d641a5a98c082f7cbcb262780c6715.php:61
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:66
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:61
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:12
+msgid ""
+"Please never share your private key with anyone as they will be able to "
+"steal money from you!"
+msgstr ""
+"НИКОГДА! не отправляйте свой приватный ключ кому-либо потому что этот кто-то "
+"украдет ваши монеты!"
+
+#: cache/compiler/06d76f00878efc92a5db9e591a55bffe.php:32
+#: cache/compiler/06d76f00878efc92a5db9e591a55bffe.php:41
+#, fuzzy
+#| msgid "Technical issues"
+msgid "Technical Timout"
+msgstr "Технические вопросы"
+
+#: cache/compiler/06d76f00878efc92a5db9e591a55bffe.php:33
+#: cache/compiler/06d76f00878efc92a5db9e591a55bffe.php:45
+msgid ""
+"We are working hard now to make your experience better! Just whait several "
+"minutes!"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:21
+#, fuzzy
+#| msgid "Main Page"
+msgid "Back to Main Page"
+msgstr "Главная"
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:28
+msgid "This Action should be confirmed"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:29
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:27
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:27
+msgid "It's only for the security reasons"
+msgstr "Исключительно в целях безопасности"
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:36
+msgid "The current link was already used before"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:37
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:44
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:88
+#, fuzzy
+#| msgid "User blocked! Please contact support for more info."
+msgid "Contact Support for more information"
+msgstr ""
+"Пользователь был заблокирован. Пожалуйста свяжитесь со службой поддержки"
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:43
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:87
+msgid "The current link are not available because time reason."
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:59
+msgid "Please confirm that you need to change password"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:64
+#, fuzzy
+#| msgid "Password"
+msgid "New password"
+msgstr "Пароль"
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:72
+msgid "New password confirm"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:81
+msgid "To activate your account please push the button below"
+msgstr ""
+
+#: cache/compiler/17fe885908194c61a9e35b5b750df8ac.php:95
+msgid "Confirm Action"
+msgstr ""
+
+#: cache/compiler/366efa9fa8b5c4b1c56503a280b4bbb2.php:26
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:26
 msgid "Photo or Logo"
 msgstr ""
 
+#: cache/compiler/366efa9fa8b5c4b1c56503a280b4bbb2.php:50
+#: cache/compiler/75b3152d5f262f16039e629b6fa01311.php:89
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:50
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:64
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_edit.volt.php:89
 msgid "Please click on image to download new one "
 msgstr ""
 
+#: cache/compiler/366efa9fa8b5c4b1c56503a280b4bbb2.php:55
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:55
 msgid "Good image will looks better in account."
 msgstr ""
 
+#: cache/compiler/366efa9fa8b5c4b1c56503a280b4bbb2.php:60
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:60
 msgid "Are you sure you want delete your image?"
 msgstr ""
 
+#: cache/compiler/366efa9fa8b5c4b1c56503a280b4bbb2.php:63
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_offer_edit.volt.php:63
 msgid "Delete existing one"
 msgstr ""
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:33
+msgid "There is no closed offers right now"
+msgstr "На данный момент нет оконченных офферов"
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:35
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:32
+msgid "There is no active offers right now"
+msgstr "На данный момент нет активных офферов"
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:68
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:65
+msgid "hot"
+msgstr "Горячее"
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:70
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:67
+msgid "new"
+msgstr "Свежак!"
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:79
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:76
+msgid "dedline"
+msgstr "Действует до"
+
+#: cache/compiler/402ad1735df12319250b0e4484aeac33.php:91
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:88
+msgid "Get"
+msgstr "Получить!"
+
+#: cache/compiler/442c72367b26a27b377f0645dd51456e.php:36
+#, php-format
+msgid "Searching for \"%s\""
+msgstr ""
+
+#: cache/compiler/442c72367b26a27b377f0645dd51456e.php:50
+msgid ""
+"We not found anything for this query. Please try to search something else."
+msgstr ""
+
+#: cache/compiler/492a8fa7b4d2c7de514cc60a58de87fd.php:26
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:26
+#, fuzzy
+#| msgid "Permission Denied"
+msgid "Permission denied!"
+msgstr "Доступ запрещен"
+
+#: cache/compiler/492a8fa7b4d2c7de514cc60a58de87fd.php:28
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:28
+msgid "You should be authorized or have another User Role in system"
+msgstr ""
+
+#: cache/compiler/492a8fa7b4d2c7de514cc60a58de87fd.php:31
+#: cache/compiler/a8c4f7c4752df6a7d16357e6c8ec1518.php:31
+#: cache/compiler/bfd5943f42910a7e9c99d09dbd3979a2.php:31
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:31
+#, fuzzy
+#| msgid "Login in"
+msgid "Login In"
+msgstr "Идет вход"
+
+#: cache/compiler/4fa4a98135bdb739125da47ceeb9b60d.php:28
+msgid "Authorization Error"
+msgstr ""
+
+#: cache/compiler/4fa4a98135bdb739125da47ceeb9b60d.php:33
+#, fuzzy
+#| msgid "Message"
+msgid "Message: "
+msgstr "Сообщение"
+
+#: cache/compiler/4fa4a98135bdb739125da47ceeb9b60d.php:42
+msgid "Retry"
+msgstr ""
+
+#: cache/compiler/4fa4a98135bdb739125da47ceeb9b60d.php:47
+msgid "Cancel"
+msgstr ""
+
+#: cache/compiler/75b3152d5f262f16039e629b6fa01311.php:64
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_edit.volt.php:64
+msgid "Image"
+msgstr ""
+
+#: cache/compiler/75b3152d5f262f16039e629b6fa01311.php:168
+msgid "Offer description"
+msgstr "Описание оффера"
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Confirm this please"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Confirm"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Error while form was procesed"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "popup.text.action_complete"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Close"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Ok"
+msgstr ""
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_splash.volt.php:5
+msgid "Loading..."
+msgstr "Загружается…"
+
+#: cache/compiler/9451cb59fc09dd0848baee05eb39f3fc.php:1
+msgid "Got It"
+msgstr ""
+
+#: cache/compiler/982b07381d658104dbf577ac89145620.php:26
+#, fuzzy
+#| msgid "Internal Server Error"
+msgid "Internal Service Error"
+msgstr "Внутренняя ошибка сервера"
+
+#: cache/compiler/982b07381d658104dbf577ac89145620.php:28
+msgid "If you see this message too often please let us know!"
+msgstr ""
+
+#: cache/compiler/982b07381d658104dbf577ac89145620.php:31
+msgid "Contact Support"
+msgstr ""
+
+#: cache/compiler/a8c4f7c4752df6a7d16357e6c8ec1518.php:26
+#: cache/compiler/bfd5943f42910a7e9c99d09dbd3979a2.php:26
+msgid "Authorzation needed!"
+msgstr ""
+
+#: cache/compiler/a8c4f7c4752df6a7d16357e6c8ec1518.php:28
+#: cache/compiler/bfd5943f42910a7e9c99d09dbd3979a2.php:28
+msgid "You should be authorized to use this page"
+msgstr ""
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:35
+msgid "Send feedback!"
+msgstr "Отправить сообщение"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:37
+msgid "We will be happy to help you in any reason"
+msgstr "Мы будем рады вам помочь"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:51
+msgid "Your name"
+msgstr "Ваше имя"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:63
+msgid "Request Type"
+msgstr "Тип вопроса"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:66
+msgid "Technical issues"
+msgstr "Технические вопросы"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:67
+msgid "Financial issues"
+msgstr "Финансовые вопросы"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:68
+msgid "Other"
+msgstr "Другое"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:73
+msgid "Message"
+msgstr "Сообщение"
+
+#: cache/compiler/b10fd0c4913ba6eb585eeb3974e81b7f.php:78
+msgid "Send"
+msgstr "Отправить"
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:36
+msgid "Your Company Profile"
+msgstr ""
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:46
+#, fuzzy
+#| msgid "Company General data saved successfully"
+msgid "Company General Data"
+msgstr "Данные успешно сохранены"
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:57
+#, fuzzy
+#| msgid "Company name is Required!"
+msgid "Company name"
+msgstr "Название компаниии обязательно"
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:61
+#, fuzzy
+#| msgid "%s Company"
+msgid "Company Name"
+msgstr "%s Компания"
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:68
+msgid "Company short description"
+msgstr ""
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:80
+msgid "Save"
+msgstr ""
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:93
+#, fuzzy
+#| msgid "Logout"
+msgid "Logo"
+msgstr "Выход"
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:108
+msgid "Please click on image to download new one"
+msgstr ""
+
+#: cache/compiler/c4c7f377e5249e63f4096d60a26e2b58.php:114
+msgid ""
+"Logo will help us to brand everything that we can. Invoices for example."
+msgstr ""
+
+#: cache/compiler/de6c7a6e3201ba49b243fab510a5f619.php:27
+msgid "Account was blocked!"
+msgstr ""
+
+#: cache/compiler/de6c7a6e3201ba49b243fab510a5f619.php:29
+#, fuzzy
+#| msgid ""
+#| "This account was deleted. If you did not do this or you want to "
+#| "reestablish an account please contact with support."
+msgid ""
+"This account was blocked! If you have any questions about this: please "
+"contact support."
+msgstr ""
+"Данный аккаунт был удален. Если вы хотите восстановить его - пожалуйста "
+"свяжитесь со службой поддержки"
+
+#: cache/compiler/de6c7a6e3201ba49b243fab510a5f619.php:32
+msgid "Write to support"
+msgstr ""
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:19
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:19
+msgid "Back to Index"
+msgstr "Вернуться на главную"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:26
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:26
+msgid "Login to"
+msgstr "Авторизоваться"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:39
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:39
+msgid "Email"
+msgstr "Email"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:44
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:44
+msgid "Password"
+msgstr "Пароль"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:62
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:62
+msgid "Forgоt password?"
+msgstr "Забыли пароль?"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:68
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:68
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:76
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:76
+msgid "Login"
+msgstr "Войти"
+
+#: cache/compiler/e24701b9d81c15006c6e42d3dbdf7d48.php:78
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:78
+msgid "Register"
+msgstr "Регистрация"
+
+#: cache/compiler/f2e147364aa2e5670bae390e19790301.php:25
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:25
+msgid "Page was not found!"
+msgstr "Страница не найдена"
+
+#: cache/compiler/f2e147364aa2e5670bae390e19790301.php:27
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:27
+msgid ""
+"Sorry, but the page you are looking for has note been found. Try checking "
+"the URL for error, then hit the refresh button on your browser or try found "
+"something else in our app."
+msgstr ""
+"Мы не смогли обнаружить страницу, но вы не расстраивайтесь! Проверьте "
+"правильность URL или вернитесь на главную"
+
+#: cache/compiler/f2e147364aa2e5670bae390e19790301.php:30
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:30
+msgid "Go to main page"
+msgstr "На главную"
 
 #: cache/view/_www_airdrop.local_app_site_backend-v1_views_partials_navigation.volt.php:64
 #, fuzzy
@@ -412,88 +898,14 @@ msgstr "Вернуться на главную"
 msgid "Exit"
 msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:25
-msgid "Page was not found!"
-msgstr "Страница не найдена"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:27
-msgid ""
-"Sorry, but the page you are looking for has note been found. Try checking "
-"the URL for error, then hit the refresh button on your browser or try found "
-"something else in our app."
-msgstr ""
-"Мы не смогли обнаружить страницу, но вы не расстраивайтесь! Проверьте "
-"правильность URL или вернитесь на главную"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_notfound.volt.php:30
-msgid "Go to main page"
-msgstr "На главную"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:26
-#, fuzzy
-#| msgid "Permission Denied"
-msgid "Permission denied!"
-msgstr "Доступ запрещен"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:28
-msgid "You should be authorized or have another User Role in system"
-msgstr ""
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_error_permission.volt.php:31
-#, fuzzy
-#| msgid "Login in"
-msgid "Login In"
-msgstr "Идет вход"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:68
-msgid "hot"
-msgstr "Горячее"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:70
-msgid "new"
-msgstr "Свежак!"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:76
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:37
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:37
-msgid "Estimated value"
-msgstr "~ доход"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:80
-msgid "dedline"
-msgstr "Действует до"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:87
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:39
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:39
-msgid "Views"
-msgstr "Просмотров"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_index_index.volt.php:92
-msgid "Get"
-msgstr "Получить!"
-
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:40
 msgid "Фото или лого"
 msgstr ""
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_descedit.volt.php:74
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_edit.volt.php:168
 msgid "Описание оффера"
 msgstr ""
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:59
-msgid "Activate offer"
-msgstr "Получить монеты"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_one.volt.php:66
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_offer_page.volt.php:53
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:12
-msgid ""
-"Please never share your private key with anyone as they will be able to "
-"steal money from you!"
-msgstr ""
-"НИКОГДА! не отправляйте свой приватный ключ кому-либо потому что этот кто-то "
-"украдет ваши монеты!"
 
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_footer.volt.php:7
 msgid "Disclamer"
@@ -518,15 +930,15 @@ msgstr ""
 "поведение пользователей на сайте. Если вы не согласны с этим - покиньте этот "
 "сайт."
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:6
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:7
 msgid "Featured offers"
 msgstr "Популярные офферы"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:12
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:13
 msgid "Ends in"
 msgstr "Закроется через"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:12
+#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_right_col.volt.php:13
 msgid "views"
 msgstr "показ(ов)"
 
@@ -576,10 +988,6 @@ msgstr ""
 msgid "Feedback"
 msgstr "Обратная связь"
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_splash.volt.php:5
-msgid "Loading..."
-msgstr "Загружается…"
-
 #: cache/view/_www_airdrop.local_app_site_frontend-v1_views_partials_splash.volt.php:6
 msgid "Please whaiting while loading"
 msgstr "Ожидайте загрузки"
@@ -590,68 +998,10 @@ msgid ""
 "browsehappy.com/\">upgrade your browser</a> to improve your experience."
 msgstr ""
 
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:19
-msgid "Back to Index"
-msgstr "Вернуться на главную"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:26
-msgid "Login to"
-msgstr "Авторизоваться"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:27
-msgid "It's only for the security reasons"
-msgstr "Исключительно в целях безопасности"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:39
-msgid "Email"
-msgstr "Email"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:44
-msgid "Password"
-msgstr "Пароль"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:62
-msgid "Forgоt password?"
-msgstr "Забыли пароль?"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:68
-msgid "Remember me"
-msgstr "Запомнить меня"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:76
-msgid "Login"
-msgstr "Войти"
-
-#: cache/view/_www_airdrop.local_app_site_frontend-v1_views_user_auth.volt.php:78
-msgid "Register"
-msgstr "Регистрация"
-
-#~ msgid "Send feedback!"
-#~ msgstr "Отправить сообщение"
-
-#~ msgid "We will be happy to help you in any reason"
-#~ msgstr "Мы будем рады вам помочь"
-
-#~ msgid "Your name"
-#~ msgstr "Ваше имя"
-
-#~ msgid "Request Type"
-#~ msgstr "Тип вопроса"
-
-#~ msgid "Technical issues"
-#~ msgstr "Технические вопросы"
-
-#~ msgid "Financial issues"
-#~ msgstr "Финансовые вопросы"
-
-#~ msgid "Other"
-#~ msgstr "Другое"
-
-#~ msgid "Message"
-#~ msgstr "Сообщение"
-
-#~ msgid "Send"
-#~ msgstr "Отправить"
+#, fuzzy
+#~| msgid "Company was not found. Please contact support to fix this problem."
+#~ msgid "Offer was not found. Please contact support to fix this problem."
+#~ msgstr "Компания не была найдена, Свяжитесь с поддержкой. "
 
 #~ msgid "My Company"
 #~ msgstr "Моя компания"

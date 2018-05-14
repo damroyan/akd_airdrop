@@ -17,6 +17,9 @@ trait TraitFrontendV1Route {
 
             // CORE роуты
             ['index', 'index', '/', ],
+            ['index', 'index', '/active/', 'active', ['active'] ],
+            ['index', 'index', '/closed/', 'closed', ['closed']],
+
             ['index', 'setLanguage', '/set/language/', ],
             ['index', 'search', '/search/', ],
 
@@ -51,8 +54,7 @@ trait TraitFrontendV1Route {
             // CUSTOM роуты для разработки под каждый проект
             ['feedback', 'form', '/feedback/'],
 
-            ['offer','one'  ,'/offer/{offer_id:[a-z0-9\-]+}/'],
-            ['offer','page'  ,'/offer/page/{offer_id:[a-z0-9\-]+}/'],
+            ['offer','page'  ,'/offer/{offer_id:[a-z0-9\-]+}/'],
             ['offer', 'list', '/offers/'],
             ['offer', 'edit', '/offer/edit/'],
 

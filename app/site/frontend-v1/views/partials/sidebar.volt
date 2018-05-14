@@ -30,11 +30,11 @@
             </li>
 
             <li {% if active_tab == 'offers' %} class="active" {% endif %}>
-                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('Active Offers') }}</span></a>
+                <a href="{{ url({'for':'frontend-v1-index-index-active'}) }}"> <span class="nav-label">{{ t.gettext('Active Offers') }}</span></a>
             </li>
 
             <li {% if active_tab == 'closed_offers' %} class="active" {% endif %}>
-                <a href="{{ url({'for':'frontend-v1-index-index'}) }}"> <span class="nav-label">{{ t.gettext('Closed Offers') }}</span></a>
+                <a href="{{ url({'for':'frontend-v1-index-index-closed'}) }}"> <span class="nav-label">{{ t.gettext('Closed Offers') }}</span></a>
             </li>
 
             <li {% if active_tab == 'faq' %} class="active" {% endif %}>

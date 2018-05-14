@@ -8,9 +8,12 @@
                 {% if offers|length == 0 %}
                 <div class="hpanel">
                     <div class="panel-body">
-
                         <h2 class="font-light m-b-xs text-center">
-                            На данный момент нет активных офферов
+                            {% if active_tab == 'closed_offers' %}
+                            {{ t.gettext('There is no closed offers right now') }}
+                            {% else %}
+                            {{ t.gettext('There is no active offers right now') }}
+                            {% endif %}
                         </h2>
                         <small></small>
                     </div>

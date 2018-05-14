@@ -1,7 +1,8 @@
+
 <div class="col-md-3">
+    {% if featured_offers|length > 0 %}
 
-
-        <div class="hpanel">
+    <div class="hpanel">
             <div class="panel-body">
                 <h5>{{ t.gettext('Featured offers') }}</h5>
                 {% for offer in featured_offers %}
@@ -13,10 +14,9 @@
                     </div>
                 </div>
                 {% endfor %}
-
-
             </div>
         </div>
+    {% endif %}
 
         <div class="hpanel">
             <div class="panel-body">

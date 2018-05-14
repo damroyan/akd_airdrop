@@ -10,14 +10,22 @@ class IndexController extends Controller {
      * @Role({"allow": ['public']})
      */
     public function indexAction() {
-
+        $params = $this->dispatcher->getParams();
         $this->view->setVar('active_tab','index');
+
+        $offer_status = \Model\Offer::STATUS_ACTIVE;
+        if ($params[0] == 'closed') {
+            $this->view->setVar('active_tab','closed_offers');
+            $offer_status = \Model\Offer::STATUS_INACTIVE;
+        } elseif ($params[0] == 'active') {
+            $this->view->setVar('active_tab','offers');
+        }
 
         $offers = \Model\Offer::find([
             'conditions'    => 'offer_status = :offer_status: AND offer_delete=:offer_delete:',
             'bind'          => [
                 'offer_delete' => \Model\Offer::DELETE_FALSE,
-                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+                'offer_status' => $offer_status,
             ],
             'order'         => 'offer_priority DESC, offer_id DESC'
         ]);

@@ -138,6 +138,106 @@ $di->set('modelsMetadata', function() use ($config) {
 	return $metaData;
 });
 
+/**
+ * @param $compiler \Phalcon\Mvc\View\Engine\Volt\Compiler
+ */
+function add2Compiler($compiler) {
+    // default
+    $compiler->addFunction('rand',          'rand');
+    $compiler->addFunction('array_merge',   'array_merge');
+    $compiler->addFunction('in_array',      'in_array');
+    $compiler->addFunction('is_array',      'is_array');
+    $compiler->addFunction('int',           'intval');
+    $compiler->addFunction('preg_match',    'preg_match');
+    $compiler->addFunction('is_file',       'is_file');
+    $compiler->addFunction('substr',        'mb_substr');
+
+    $compiler->addFilter('strip_tags',      'strip_tags');
+    $compiler->addFilter('urlencode',       'urlencode');
+    $compiler->addFilter('int',             'intval');
+    $compiler->addFilter('timestamp',       function($value) { return "strtotime({$value})"; });
+    $compiler->addFilter('var_dump',        function($value) { return "var_export({$value}, true)"; });
+    $compiler->addFilter('first_uppercase',        function($value) { return "mb_strtoupper(mb_substr({$value}, 0,1)).mb_substr({$value}, 1)"; });
+
+    // custom
+    $compiler->addFunction('static', '\Helper\StaticWrapper::exec');
+    $compiler->addFunction('image_path', '\Helper\Image::getInstance()->image');
+    $compiler->addFunction('preview', '\Helper\Text::preview');
+    $compiler->addFunction('text_substr', '\Helper\Text::substr');
+    $compiler->addFunction('plural', '\Helper\Text::plural');
+    $compiler->addFunction('platform', '\Helper\UA::Platform');
+
+    $compiler->addFunction('widget', function($resolvedArgs, $exprArgs) use ($compiler, $view) {
+        $class = trim($compiler->expression($exprArgs[0]['expr']), "'");
+        $params = empty($exprArgs[1]['expr']) ? null : $compiler->expression($exprArgs[1]['expr']);
+        return "\\Site\\FrontendV2\\Widgets\\$class::widget($params)";
+    });
+
+    $compiler->addFunction('partial_local', function($resolvedArgs, $exprArgs) use ($compiler,$view) {
+        $name = trim($compiler->expression($exprArgs[0]['expr']), "'");
+        $values = trim($compiler->expression($exprArgs[1]['expr']), "'");
+        $lang = trim($compiler->expression($exprArgs[2]['expr']), "'");
+
+        $view = new \Phalcon\Mvc\View();
+        $dir = $view->getViewsDir();
+
+        $locale_file = '/languages/'.$lang.'/partials/'.$name;
+        //echo '<br>'.$dir.$locale_file.'.volt';
+        //exit;
+        if (file_exists($dir.$locale_file.'.volt')) {
+            /*
+                 var_dump($view->re('../'.$locale_file));
+                 exit;*/
+
+        }
+        //eturn $view->partial($name,$values);
+    });
+
+    $compiler->addFilter('hash_number', function($value) { return "\Helper\Text::hashNumber({$value})"; });
+    $compiler->addFilter('cut', function($value, $exprArgs) use ($compiler) {
+        $value = empty($exprArgs[0]['expr']) ? null : $compiler->expression($exprArgs[0]['expr']);
+        $length = empty($exprArgs[1]['expr']) ? null : $compiler->expression($exprArgs[1]['expr']);
+        $offset = empty($exprArgs[2]['expr']) ? 0 : $compiler->expression($exprArgs[2]['expr']);
+
+        if(!$length) {
+            return "{$value}";
+        }
+
+        return "mb_substr({$value}, $offset, $length)";
+    });
+
+    $compiler->addFilter('html_remove',     function($value) { return "\Helper\Text::removeHtml({$value})"; });
+    $compiler->addFilter('go',              function($value) { return "\Helper\Go::exec({$value})"; });
+
+    $compiler->addFilter('date_utc',        function($value) { return "\Helper\Datetime::exec({$value}, 'utc')"; });
+    $compiler->addFilter('time_hm',         function($value) { return "\Helper\Datetime::exec({$value}, 'time_hm')"; });
+    $compiler->addFilter('date_dmr',        function($value) { return "\Helper\Datetime::exec({$value}, 'dmr')"; });
+    $compiler->addFilter('date_dmr_pretty', function($value) { return "\Helper\Datetime::exec({$value}, 'dmr_pretty')"; });
+    $compiler->addFilter('date',            function($value) { return "\Helper\Datetime::exec({$value}, 'date')"; });
+    $compiler->addFilter('date_sql',        function($value) { return "\Helper\Datetime::exec({$value}, 'sql_date')"; });
+    $compiler->addFilter('date_y',          function($value) { return "\Helper\Datetime::exec({$value}, 'year')"; });
+    $compiler->addFilter('time',            function($value) { return "\Helper\Datetime::exec({$value}, 'time')"; });
+    $compiler->addFilter('datetime',        function($value) { return "\Helper\Datetime::exec({$value}, 'datetime')"; });
+    $compiler->addFilter('datetime_check',  function($value) { return "\Helper\Datetime::exec({$value}, 'check')"; });
+    $compiler->addFilter('datetime_pretty', function($value) { return "\Helper\Datetime::exec({$value}, 'pretty')"; });
+
+    $compiler->addFilter('http',            function($value) { return "\Helper\String2Url::url({$value})"; });
+    $compiler->addFilter('http_domain',     function($value) { return "\Helper\String2Url::domain({$value})"; });
+    $compiler->addFilter('http_unset',      function($value) { return "\Helper\String2Url::unsetHttpProtocol({$value})"; });
+
+    $compiler->addFunction('widget', function($resolvedArgs, $exprArgs) use ($compiler, $view) {
+        preg_match('@\/site\/([^\/]+)\/views\/@ui', $exprArgs[0]['file'], $match);
+        $module = implode('', array_map(function($value) {
+            return ucfirst($value);
+        }, explode('-', $match[1])));
+
+        $class = trim($compiler->expression($exprArgs[0]['expr']), "'");
+        $params = empty($exprArgs[1]['expr']) ? null : $compiler->expression($exprArgs[1]['expr']);
+
+        return "\\Site\\{$module}\\Widget\\$class::widget($params)";
+    });
+}
+
 $di->set('view', function() use ($config) {
     $eventsManager = new Phalcon\Events\Manager();
 

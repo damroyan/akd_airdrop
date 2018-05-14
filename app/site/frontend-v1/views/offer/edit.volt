@@ -194,7 +194,7 @@
 
             <div class="form-group">
                 <label for="label-for-user_status" class="col-sm-2 control-label">
-                    {{ t.gettext('Описание оффера') }}
+                    {{ t.gettext('Offer description') }}
                 </label>
                 <div class="col-sm-10">
                     {{ text_area(
