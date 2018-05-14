@@ -89,6 +89,7 @@ define(['jquery',
             function getDate( element ) {
                 var date,
                     dateFormat = $.datepicker._defaults['dateFormat'];
+                    //;
 
                 try {
                     date = $.datepicker.parseDate( dateFormat, element.value );
@@ -102,7 +103,7 @@ define(['jquery',
 
             $('input[data-datepicker]').each(function() {
                 var data = $(this).data(),
-                    params = {};
+                    params = {dateFormat : 'yy-mm-dd'};
 
                 if(data['datepickerMaxDate'] === true) {
                     params['maxDate'] = '0d';

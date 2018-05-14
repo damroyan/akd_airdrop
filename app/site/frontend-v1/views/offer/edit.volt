@@ -13,13 +13,7 @@
 
     </h2>
 
-    <hr />
-
-
-
-    <hr />
-
-    <div>
+    <div class="panel-body">
 
         <form action="javascript:;"
               method="post"
@@ -33,8 +27,9 @@
                     Название</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_name",
-                    'class': 'form-control'
+                        "offer_name",
+                        'class': 'form-control',
+                        'placeholder': 'BITCOIN'
                     ) }}
                 </div>
 
@@ -45,8 +40,9 @@
                     Код валюты</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_code",
-                    'class': 'form-control'
+                        "offer_code",
+                        'class': 'form-control',
+                        'placeholder': 'BTC'
                     ) }}
                 </div>
 
@@ -71,11 +67,15 @@
                 <label for="label-for-user_firstname" class="col-sm-2 control-label">
                     Рассчетный доход</label>
                 <div class="col-sm-10">
-                    {{ text_field(
-                    "offer_profit",
-                    'class': 'form-control',
-                    'id': 'label-for-user_firstname'
-                    ) }}
+                    <div class="input-group m-b">
+                        <span class="input-group-addon">$</span>
+                        {{ text_field(
+                            "offer_profit",
+                            'class': 'form-control',
+                            'id': 'label-for-user_firstname',
+                            'placeholder': '0.00'
+                        ) }}
+                    </div>
                 </div>
             </div>
 
@@ -84,9 +84,10 @@
                     Ссылка на оффер</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_url",
-                    'class': 'form-control',
-                    'id': 'label-for-user_lastname'
+                        "offer_url",
+                        'class'         : 'form-control',
+                        'id'            : 'label-for-user_lastname',
+                        'placeholder'   : 'ОБЕРНУТАЯ В byt.ly!'
                     ) }}
                 </div>
             </div>
@@ -96,9 +97,10 @@
                     Ссылка на сайт оффера</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_site_url",
-                    'class': 'form-control',
-                    'id': 'label-for-user_cdate'
+                        "offer_site_url",
+                        'class': 'form-control',
+                        'id': 'label-for-user_cdate',
+                        'placeholder'   : 'просто ссылка на сайт'
                     ) }}
                 </div>
             </div>
@@ -108,10 +110,10 @@
                     Дата окончания оффера</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_end_date",
-                    'class': 'form-control',
-                    'id': 'label-for-user_cdate',
-                    'placeholder': 'Пример: 2000-01-01'
+                        "offer_end_date",
+                        'class': 'form-control',
+                        'data-datepicker':'true',
+                        'placeholder': 'Пример: 2000-01-01'
                     ) }}
                 </div>
             </div>
@@ -147,9 +149,10 @@
                     Просмотры</label>
                 <div class="col-sm-10">
                     {{ text_field(
-                    "offer_views",
-                    'class': 'form-control',
-                    'id': 'label-for-user_cdate'
+                        "offer_views",
+                        'class': 'form-control',
+                        'id': 'label-for-user_cdate',
+                        'placeholder' : 'Дефолтное значение'
                     ) }}
                 </div>
             </div>

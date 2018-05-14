@@ -87,7 +87,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h4><a href="{{ url({'for':'frontend-v1-offer-page','offer_id':offer.offer_id}) }}"> {{offer.offer_name}} </a></h4>
+                                    <h4><a href="{{ url({'for':'frontend-v1-offer-page','offer_id':offer.offer_id}) }}"> {{offer.offer_name}} {% if offer.offer_code %}({{ offer.offer_code }}){% endif %}</a></h4>
 
                                     <div class="row chld-mt5">
                                         <div class="col-sm-5">
