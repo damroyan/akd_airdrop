@@ -1,4 +1,4 @@
-<div class="content animate-panel">
+{#<div class="content animate-panel">
     <div class="row">
         <div class="col-md-6">
             <div class="hpanel panel-group" id="accordion">
@@ -286,7 +286,7 @@
 
 
     </div>
-</div>
+</div>#}
 
 
 
