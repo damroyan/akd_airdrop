@@ -12,6 +12,9 @@ class Controller extends \Controller {
     const LIMIT_LIST = 20;
 
     public function initialize() {
+
+        $this->view->setVar('language',$this->translate->getLanguage());
+
         /*
  * CORE get GLOBAL messages -- START
  */

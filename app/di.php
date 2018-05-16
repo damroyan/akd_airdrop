@@ -150,6 +150,7 @@ function add2Compiler($compiler) {
     $compiler->addFunction('int',           'intval');
     $compiler->addFunction('preg_match',    'preg_match');
     $compiler->addFunction('is_file',       'is_file');
+    $compiler->addFunction('file_exists',       'file_exists');
     $compiler->addFunction('substr',        'mb_substr');
 
     $compiler->addFilter('strip_tags',      'strip_tags');
@@ -284,6 +285,7 @@ $di->set('view', function() use ($config) {
             $compiler->addFunction('int',           'intval');
             $compiler->addFunction('preg_match',    'preg_match');
             $compiler->addFunction('is_file',       'is_file');
+            $compiler->addFunction('file_exists',       'file_exists');
             $compiler->addFunction('substr',        'mb_substr');
 
             $compiler->addFilter('strip_tags',      'strip_tags');

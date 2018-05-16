@@ -3,13 +3,16 @@
     Принимает параметры language & partial_name & params
 #}
 
+
 {% if language %}
     {% set file = ['../languages/',language,'/partials/',partial_name] | join %}
-    {% if is_file(file) %}
+    {{ partial( file, params ) }}
+
+    {#{% if is_file([ file,'.volt'] | join) %}
         {{ partial( file, params ) }}
     {% else %}
         {{ partial(partial_name,params) }}
-    {% endif %}
+    {% endif %}#}
 {% else %}
     {{ partial(partial_name,params) }}
 {% endif %}
