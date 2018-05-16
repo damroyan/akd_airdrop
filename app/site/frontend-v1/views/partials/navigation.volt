@@ -48,7 +48,7 @@
         <div class="navbar-right">
             <ul class="nav navbar-nav no-borders">
                 <li>
-                    <a href=""><i class="fa fa-telegram text-info"></i></a>
+                    <a href="https://t.me/freecryptopay" target="_blank"><i class="fa fa-telegram text-info"></i></a>
                 </li>
                {# {% if user.user_id %}
                     <li>

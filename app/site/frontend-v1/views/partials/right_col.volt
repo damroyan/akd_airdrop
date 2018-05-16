@@ -20,7 +20,7 @@
 
         <div class="hpanel">
             <div class="panel-body">
-                <a href="" class="text-uppercase"><i class="fa fa-telegram text-info" style="font-size: 22px;"></i> &nbsp; Получать Обновления </a>
+                <a href="https://t.me/freecryptopay" class="text-uppercase" target="_blank"><i class="fa fa-telegram text-info" style="font-size: 22px;"></i> &nbsp; Получать Обновления </a>
             </div>
         </div>
 
