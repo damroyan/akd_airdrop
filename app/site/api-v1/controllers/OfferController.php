@@ -220,8 +220,8 @@ class OfferController extends Controller {
      * @return \Phalcon\Http\Response
      */
     public function listAction() {
-        $params = $this->getParams();
-//        $params = $this->request->getQuery();
+//        $params = $this->getParams();
+        $params = $this->request->getQuery();
         if(is_http_response($params)) { return $params; }
 
         if (!$params['limit']) {
@@ -258,7 +258,9 @@ class OfferController extends Controller {
      * @return \Phalcon\Http\Response
      */
     public function detailsAction() {
-        $params = $this->getParams();
+//        $params = $this->getParams();
+        $params = $this->request->getQuery();
+
         if(is_http_response($params)) { return $params; }
 
         if (!$params['offer_id']) {
