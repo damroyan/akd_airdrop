@@ -211,5 +211,67 @@ class OfferController extends Controller {
     }
 
 
+    /**
+     * Возвращает список офферов
+     *
+     * на вход limit, offset
+     *
+     * @Role({"allow": ['public']})
+     * @return \Phalcon\Http\Response
+     */
+    public function listAction() {
+        $params = $this->getParams();
+//        $params = $this->request->getQuery();
+        if(is_http_response($params)) { return $params; }
+
+        if (!$params['limit']) {
+            $limit = 50;
+        } else {
+            $limit = $params['limit'];
+        }
+
+        if (!$params['offset']) {
+            $offset = 0;
+        } else {
+            $offset = $params['offset'];
+        }
+
+        $offers = \Model\Offer::find([
+            "offer_status = :offer_status:",
+            'bind' => [
+                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+            ],
+            'columns' => 'offer_id,offer_name,offer_picture,offer_description',
+            'limit' => $limit,
+            'offset' => $offset,
+            'order'     => 'offer_id DESC'
+        ]);
+        return \Response::Ok($offers);
+    }
+
+    /**
+     * Возвращает данные по офферу
+     *
+     * на вход offer_id
+     *
+     * @Role({"allow": ['public']})
+     * @return \Phalcon\Http\Response
+     */
+    public function detailsAction() {
+        $params = $this->getParams();
+        if(is_http_response($params)) { return $params; }
+
+        if (!$params['offer_id']) {
+            return \Response::Error(400, 'offer_id_empty');
+        }
+
+        $offer = \Model\Offer::findfirst([
+            "offer_id = :offer_id:",
+            'bind' => [
+                'offer_id' => $params['offer_id'],
+            ]
+        ]);
+        return \Response::Ok($offer);
+    }
 
 }

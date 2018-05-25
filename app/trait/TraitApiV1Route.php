@@ -52,6 +52,10 @@ trait TraitApiV1Route {
             ['offer', 'descUpdate'],
             ['offer', 'picture'],
 
+            ['offer', 'list'],
+            ['offer', 'details'],
+
+
 
 
             // NEW PROJECT NAME - ROUTES
