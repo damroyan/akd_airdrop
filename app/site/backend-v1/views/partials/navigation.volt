@@ -39,12 +39,6 @@
                                 История авторизаций</a></li>
                     </ul>
                 </li>
-                <li class=" {% if preg_match('@^offer@ui', header_tab) %} active {% endif %} ">
-                    <a  href="{{ url({'for': 'backend-v1-offer-list'}) }}"
-                    >
-                        Офферы
-                    </a>
-                </li>
                 <li class=" {% if preg_match('@^user_@ui', header_tab) %} active {% endif %} ">
                     <a  href="{{ url({'for': 'frontend-v1-feedback-form'}) }}"
                     >

@@ -114,18 +114,32 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="label-for-user_lastname" class="col-sm-2 control-label">
-                    Ссылка на оффер</label>
-                <div class="col-sm-10">
-                    {{ text_field(
-                        "offer_url",
+            <div id="add_field_area">
+                {% for item in offer_urls%}
+                <div class="form-group">
+                    <label for="label-for-user_lastname" class="col-sm-2 control-label">
+                        Ссылка на оффер
+                        {%if loop.index == 1%}
+                        <small class="bg-info js_add_button"><a href="javascript:;">+добавить еще ссылку</a> </small>
+                        {%else%}
+                        {{loop.index}}
+                        {%endif%}
+                    </label>
+                    <div class="col-sm-10">
+                        {{ text_field(
+                        "offer_url[]",
                         'class'         : 'form-control',
                         'id'            : 'label-for-user_lastname',
-                        'placeholder'   : 'ОБЕРНУТАЯ В byt.ly!'
-                    ) }}
+                        'placeholder'   : 'ОБЕРНУТАЯ В byt.ly!',
+                        'value'         : item
+                        ) }}
+                    </div>
                 </div>
+
+                {%endfor%}
+
             </div>
+
 
             <div class="form-group">
                 <label for="label-for-user_cdate" class="col-sm-2 control-label">

@@ -42,6 +42,9 @@ class OfferController extends Controller
             return $this->error404();
         }
 
+        $offer_url = json_decode($offer->offer_url);
+
+        $this->view->setVar('offer_url', $offer_url[0]);
         $this->view->setVar('offer', $offer);
     }
 
@@ -161,6 +164,8 @@ class OfferController extends Controller
         }
 
         $this->view->o = $offer;
+        $this->view->offer_urls = json_decode($offer->offer_url);
+
 
         \Phalcon\Tag::setDefaults([
             'offer_id'              => params_has_or_null($offer->offer_id),
@@ -168,7 +173,7 @@ class OfferController extends Controller
             'offer_type'            => params_has_or_null($offer->offer_type),
             'offer_description'     => params_has_or_null($offer->offer_description),
             'offer_profit'          => params_has_or_null($offer->offer_profit),
-            'offer_url'             => params_has_or_null($offer->offer_url),
+//            'offer_url'             => params_has_or_null($offer->offer_url),
             'offer_site_url'        => params_has_or_null($offer->offer_site_url),
             'offer_end_date'        => params_has_or_null($offer->offer_end_date),
             'offer_rating'          => params_has_or_null($offer->offer_rating),
@@ -178,7 +183,6 @@ class OfferController extends Controller
             'offer_views'           => $offer->offer_views,
             'offer_code'            => $offer->offer_code,
             'offer_picture'         => $offer->offer_picture,
-
         ]);
     }
 

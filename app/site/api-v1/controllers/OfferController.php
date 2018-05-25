@@ -55,6 +55,11 @@ class OfferController extends Controller {
             $params['offer_views'] = rand(100,200);
         }
 
+        // разбираем массив с урлами
+        $offer_urls = $params['offer_url'];
+        $offer_urls = array_diff($offer_urls, array(''));
+        $params['offer_url'] = json_encode($offer_urls);
+
         if($params['offer_id']) {
             $offer = \Model\Offer::findFirst([
                 "offer_id = :offer_id:",
