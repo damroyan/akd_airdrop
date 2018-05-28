@@ -34,4 +34,28 @@ class MainTask extends \Phalcon\CLI\Task {
             };
         }
     }
+
+    /**
+     * Временная функция
+     *
+     * @return \Phalcon\Http\Response
+     * @throws Exception
+     */
+    public function tempAction() {
+
+        $offers = \Model\Offer::find();
+
+        foreach ($offers as $offer) {
+            if (!is_array(json_decode($offer->offer_url))) {
+                $offer->assign([
+                    'offer_url' => json_encode([$offer->offer_url]),
+                ]);
+
+                if(!$offer->save()) {
+                    print_r("Ошибка db");
+                };
+            }
+        }
+    }
+
 }
