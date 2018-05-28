@@ -286,7 +286,7 @@ class OfferController extends Controller {
         }
 
         $offer = \Model\Offer::findfirst([
-            'columns' => 'offer_id,offer_name,offer_picture,offer_description,offer_type,offer_profit,offer_url,offer_end_date,offer_rating,offer_code',
+            'columns' => 'offer_id,offer_name,offer_picture,offer_description,offer_type,offer_profit,offer_url,offer_end_date,offer_rating,offer_code, offer_status',
             "offer_id = :offer_id:",
             'bind' => [
                 'offer_id' => $params['offer_id'],
