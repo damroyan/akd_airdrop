@@ -246,6 +246,16 @@ class OfferController extends Controller {
             'offset' => $offset,
             'order'     => 'offer_id DESC'
         ]);
+
+        $offers = $offers->toarray();
+
+        $count = 0;
+        while ($count < count($offers)) {
+            if (!empty($offers[$count]['offer_picture'])) {
+                $offers[$count]['offer_picture'] = $this->config->application->protocol.$this->config->application->domain.$offers[$count]['offer_picture'];
+            }
+            $count++;
+        }
         return \Response::Ok($offers);
     }
 
@@ -273,6 +283,10 @@ class OfferController extends Controller {
                 'offer_id' => $params['offer_id'],
             ]
         ]);
+
+        if (!empty($offer->offer_picture)) {
+            $offer->offer_picture = $this->config->application->protocol.$this->config->application->domain.$offer->offer_picture;
+        }
         return \Response::Ok($offer);
     }
 
