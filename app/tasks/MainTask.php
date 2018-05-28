@@ -21,6 +21,10 @@ class MainTask extends \Phalcon\CLI\Task {
             ],
         ]);
 
+        $count = count($expired_offers);
+
+        echo "Найдено $count прошедших офферов";
+
         foreach ($expired_offers as $expired_offer) {
             $expired_offer->assign([
                 'offer_status' => \Model\Offer::STATUS_INACTIVE,
