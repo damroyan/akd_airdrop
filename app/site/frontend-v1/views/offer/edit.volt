@@ -156,20 +156,6 @@
 
             </div>
 
-
-            <div class="form-group">
-                <label for="label-for-user_cdate" class="col-sm-2 control-label">
-                    Ссылка на сайт оффера</label>
-                <div class="col-sm-10">
-                    {{ text_field(
-                        "offer_site_url",
-                        'class': 'form-control',
-                        'id': 'label-for-user_cdate',
-                        'placeholder'   : 'просто ссылка на сайт'
-                    ) }}
-                </div>
-            </div>
-
             <div class="form-group">
                 <label for="label-for-user_role" class="col-sm-2 control-label">
                     Дата окончания оффера</label>

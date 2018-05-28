@@ -82,7 +82,7 @@ class OfferController extends Controller {
             'offer_type'                => params_has_or_null($params['offer_type']),
             'offer_profit'              => params_has_or_null($params['offer_profit']),
             'offer_url'                 => params_has_or_null($params['offer_url']),
-            'offer_site_url'            => $params['offer_site_url'],
+//            'offer_site_url'            => $params['offer_site_url'],
             'offer_end_date'            => params_has_or_null($params['offer_end_date']),
             'offer_rating'              => params_has_or_null($params['offer_rating']),
             'offer_status'              => params_has_or_null($params['offer_status']),
