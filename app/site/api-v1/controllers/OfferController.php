@@ -224,6 +224,10 @@ class OfferController extends Controller {
         $params = $this->request->getQuery();
         if(is_http_response($params)) { return $params; }
 
+        if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
+            return \Response::Error(400, 'hash_error');
+        }
+
         if (!$params['limit']) {
             $limit = 50;
         } else {
@@ -272,6 +276,10 @@ class OfferController extends Controller {
         $params = $this->request->getQuery();
 
         if(is_http_response($params)) { return $params; }
+
+        if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
+            return \Response::Error(400, 'hash_error');
+        }
 
         if (!$params['offer_id']) {
             return \Response::Error(400, 'offer_id_empty');
