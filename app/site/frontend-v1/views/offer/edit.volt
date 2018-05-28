@@ -115,6 +115,22 @@
             </div>
 
             <div id="add_field_area">
+                {% if offer_urls|length == 0 %}
+                <div class="form-group">
+                    <label for="label-for-user_lastname" class="col-sm-2 control-label">
+                        Ссылка на оффер
+                        <small class="bg-info js_add_button"><a href="javascript:;">+добавить еще ссылку</a> </small>
+                    </label>
+                    <div class="col-sm-10">
+                        {{ text_field(
+                        "offer_url[]",
+                        'class'         : 'form-control',
+                        'id'            : 'label-for-user_lastname',
+                        'placeholder'   : 'ОБЕРНУТАЯ В byt.ly!'
+                        ) }}
+                    </div>
+                </div>
+                {% endif %}
                 {% for item in offer_urls%}
                 <div class="form-group">
                     <label for="label-for-user_lastname" class="col-sm-2 control-label">
