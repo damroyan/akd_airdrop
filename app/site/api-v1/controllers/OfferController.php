@@ -225,7 +225,7 @@ class OfferController extends Controller {
         if(is_http_response($params)) { return $params; }
 
         if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
-            return \Response::Error(400, 'hash_error');
+            return \Response::Error(403, 'hash_error');
         }
 
         if (!$params['limit']) {
@@ -278,7 +278,7 @@ class OfferController extends Controller {
         if(is_http_response($params)) { return $params; }
 
         if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
-            return \Response::Error(400, 'hash_error');
+            return \Response::Error(403, 'hash_error');
         }
 
         if (!$params['offer_id']) {
