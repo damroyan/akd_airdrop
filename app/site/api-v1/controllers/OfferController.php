@@ -260,6 +260,9 @@ class OfferController extends Controller {
             }
             $count++;
         }
+
+        ob_start("ob_gzhandler");
+
         return \Response::Ok($offers);
     }
 
