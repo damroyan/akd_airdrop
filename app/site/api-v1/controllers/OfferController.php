@@ -82,7 +82,7 @@ class OfferController extends Controller {
             'offer_type'                => params_has_or_null($params['offer_type']),
             'offer_profit'              => params_has_or_null($params['offer_profit']),
             'offer_url'                 => params_has_or_null($params['offer_url']),
-            'offer_site_url'            => $params['offer_site_url'],
+//            'offer_site_url'            => $params['offer_site_url'],
             'offer_end_date'            => params_has_or_null($params['offer_end_date']),
             'offer_rating'              => params_has_or_null($params['offer_rating']),
             'offer_status'              => params_has_or_null($params['offer_status']),
@@ -224,6 +224,10 @@ class OfferController extends Controller {
         $params = $this->request->getQuery();
         if(is_http_response($params)) { return $params; }
 
+        if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
+            return \Response::Error(403, 'hash_error');
+        }
+
         if (!$params['limit']) {
             $limit = 50;
         } else {
@@ -273,11 +277,16 @@ class OfferController extends Controller {
 
         if(is_http_response($params)) { return $params; }
 
+        if (!$params['hash'] or $params['hash'] != 'fjhdTe7dnvWckid_fjhsyY98124') {
+            return \Response::Error(403, 'hash_error');
+        }
+
         if (!$params['offer_id']) {
             return \Response::Error(400, 'offer_id_empty');
         }
 
         $offer = \Model\Offer::findfirst([
+            'columns' => 'offer_id,offer_name,offer_picture,offer_description,offer_type,offer_profit,offer_url,offer_end_date,offer_rating,offer_code, offer_status',
             "offer_id = :offer_id:",
             'bind' => [
                 'offer_id' => $params['offer_id'],

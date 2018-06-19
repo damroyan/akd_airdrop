@@ -26,11 +26,6 @@ class OfferEdit extends Validation  {
         )));
 
 
-        $this->add('offer_site_url', new PresenceOf(array(
-            'message'       => __('Offer website URL is required')
-        )));
-
-
         $this->add('offer_end_date', new PresenceOf(array(
             'message'       => __('End date is required field')
         )));
