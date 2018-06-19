@@ -245,7 +245,7 @@ class OfferController extends Controller {
             'bind' => [
                 'offer_status' => \Model\Offer::STATUS_ACTIVE,
             ],
-            'columns' => 'offer_id,offer_name,offer_picture,offet_type,offer_description,offer_url,offer_profit,offer_end_date,offer_rating,offer_priority,offer_status,offer_code,offer_limit',
+            'columns' => 'offer_id,offer_name,offer_picture,offer_type,offer_description,offer_url,offer_profit,offer_end_date,offer_rating,offer_priority,offer_status,offer_code,offer_limit',
             'limit' => $limit,
             'offset' => $offset,
             'order'     => 'offer_id DESC'
