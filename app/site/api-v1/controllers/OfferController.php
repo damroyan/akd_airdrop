@@ -245,7 +245,7 @@ class OfferController extends Controller {
             'bind' => [
                 'offer_status' => \Model\Offer::STATUS_ACTIVE,
             ],
-            'columns' => 'offer_id,offer_name,offer_picture,offer_type,offer_description,offer_url,offer_profit,offer_end_date,offer_rating,offer_priority,offer_status,offer_code,offer_limit',
+            'columns' => 'offer_id,offer_name,offer_picture,offer_type,offer_description,offer_url,offer_profit,offer_real_profit,offer_end_date,offer_rating,offer_priority,offer_status,offer_code,offer_limit',
             'limit' => $limit,
             'offset' => $offset,
             'order'     => 'offer_id DESC'
@@ -289,7 +289,7 @@ class OfferController extends Controller {
         }
 
         $offer = \Model\Offer::findfirst([
-            'columns' => 'offer_id,offer_name,offer_picture,offer_description,offer_type,offer_profit,offer_url,offer_end_date,offer_rating,offer_code, offer_status',
+            'columns' => 'offer_id,offer_name,offer_picture,offer_description,offer_type,offer_profit,offer_real_profit,offer_url,offer_end_date,offer_rating,offer_code,offer_status',
             "offer_id = :offer_id:",
             'bind' => [
                 'offer_id' => $params['offer_id'],
