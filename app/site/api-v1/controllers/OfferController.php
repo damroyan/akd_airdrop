@@ -242,9 +242,10 @@ class OfferController extends Controller {
         }
 
         $offers = \Model\Offer::find([
-            "offer_status = :offer_status:",
+            "offer_status = :offer_status: AND offer_delete = :offer_delete:",
             'bind' => [
-                'offer_status' => \Model\Offer::STATUS_ACTIVE,
+                'offer_status'  => \Model\Offer::STATUS_ACTIVE,
+                'offer_delete'  => \Model\Offer::DELETE_FALSE,
             ],
             'columns' => 'offer_id,offer_name,offer_picture,offer_type,offer_description,offer_url,offer_profit,offer_real_profit,offer_end_date,offer_rating,offer_priority,offer_status,offer_code,offer_limit',
             'limit' => $limit,
