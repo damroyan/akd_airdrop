@@ -34,9 +34,9 @@ class OfferController extends Controller {
                      от 2х до 4х символов');
                 }
 
-                if((strlen($params['offer_code']) > 4) OR (strlen($params['offer_code']) < 2)) {
+                if((strlen($params['offer_code']) > 5) OR (strlen($params['offer_code']) < 2)) {
                     \Response::FieldsAdd('offer_code', 'Код валюты может содержать только буквы и цифры
-                     от 2х до 4х символов');
+                     от 2х до 5ти символов');
                 }
             }
         );
