@@ -100,12 +100,28 @@
 
             <div class="form-group">
                 <label for="label-for-user_firstname" class="col-sm-2 control-label">
-                    Рассчетный доход</label>
+                    Рассчетный доход в баксак</label>
                 <div class="col-sm-10">
                     <div class="input-group m-b">
                         <span class="input-group-addon">$</span>
                         {{ text_field(
                             "offer_profit",
+                            'class': 'form-control',
+                            'id': 'label-for-user_firstname',
+                            'placeholder': '0.00'
+                        ) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="label-for-user_firstname" class="col-sm-2 control-label">
+                    Рассчетный доход в самой валютке</label>
+                <div class="col-sm-10">
+                    <div class="input-group m-b">
+                        <span class="input-group-addon">$</span>
+                        {{ text_field(
+                            "offer_real_profit",
                             'class': 'form-control',
                             'id': 'label-for-user_firstname',
                             'placeholder': '0.00'
