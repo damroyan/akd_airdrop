@@ -296,6 +296,10 @@ class OfferController extends Controller {
         if (!empty($offer->offer_picture)) {
             $offer->offer_picture = $this->config->application->protocol.$this->config->application->domain.$offer->offer_picture;
         }
+
+        if(!empty($offer->offer_end_date)) {
+            $offer->offer_end_date = $offer->offer_end_date . ' 23:59:59';
+        }
         return \Response::Ok($offer);
     }
 
